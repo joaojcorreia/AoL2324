@@ -633,7 +633,7 @@ resultados.alumn <- students %>%
   group_by(Program, LO) %>% 
   summarise(
     avg = round(mean(Score, na.rm = TRUE), 2),
-    count = n(),
+    count = sum(!is.na(Score)),
     BT = sum(Score < 4, na.rm = TRUE),
     OT = sum(Score >= 4 & Score < 5.5, na.rm = TRUE),
     AT = sum(Score >= 5.5, na.rm = TRUE)
@@ -648,8 +648,8 @@ resultados.employers <- employ %>%
   pivot_longer(cols = c(2:7), names_to = "LO", values_to = "Score") %>% 
   drop_na() %>% 
   group_by(Program, LO) %>% 
-  summarise(avg = round(mean(Score), 2),
-            count = n(),
+  summarise(avg = round(mean(Score, na.rm = TRUE), 2),
+            count = sum(!is.na(Score)),
             BT = sum(Score < 4),
             OT = sum(Score >= 4 & Score < 5.5),
             AT = sum(Score >= 5.5)) %>% 
@@ -762,8 +762,9 @@ KPI_total_table_ppt <- function(a){
   
   subset(tabela.completa, Program == a) %>% 
     select(-1) %>% 
-    rename_with(~ c(' ', 'AY2223', 'Reassessment', 'Assessment', 'Employer', 'Alumni' )) %>%
-    unnest(cols = c(' ', 'AY2223', 'Reassessment', 'Assessment', 'Employer', 'Alumni' )) %>% 
+    rename_with(~ c(' ', 'AY2223', 'Assessment', 'Reassessment', 'Employer', 'Alumni' )) %>%
+    unnest(cols = c(' ', 'AY2223', 'Assessment', 'Reassessment', 'Employer', 'Alumni' )) %>% 
+    #slice(-4) %>% 
     flextable() %>% 
     font(part = "body", fontname = "Open Sans", j=c(2:6)) %>% 
     font(part = "body", fontname = "Playfair Display", j=1) %>%
@@ -781,14 +782,14 @@ KPI_total_table_ppt <- function(a){
     bg(bg="#D2FFFA", part="body", j=(2), i = ~ AY2223 == "B") %>% 
     bg(bg="#FEE8BC", part="body", j=(2), i = ~ AY2223 == "C") %>% 
     bg(bg="#FFCCBD", part="body", j=(2), i = ~ AY2223 == "F") %>% 
-    bg(bg="#C4FF9E", part="body", j=(3), i = ~ Reassessment == "A") %>% 
-    bg(bg="#D2FFFA", part="body", j=(3), i = ~ Reassessment == "B") %>% 
-    bg(bg="#FEE8BC", part="body", j=(3), i = ~ Reassessment == "C") %>% 
-    bg(bg="#FFCCBD", part="body", j=(3), i = ~ Reassessment == "F") %>%
-    bg(bg="#C4FF9E", part="body", j=(4), i = ~ Assessment == "A") %>% 
-    bg(bg="#D2FFFA", part="body", j=(4), i = ~ Assessment == "B") %>% 
-    bg(bg="#FEE8BC", part="body", j=(4), i = ~ Assessment == "C") %>% 
-    bg(bg="#FFCCBD", part="body", j=(4), i = ~ Assessment == "F") %>%
+    bg(bg="#C4FF9E", part="body", j=(3), i = ~ Assessment == "A") %>% 
+    bg(bg="#D2FFFA", part="body", j=(3), i = ~ Assessment == "B") %>% 
+    bg(bg="#FEE8BC", part="body", j=(3), i = ~ Assessment == "C") %>% 
+    bg(bg="#FFCCBD", part="body", j=(3), i = ~ Assessment == "F") %>%
+    bg(bg="#C4FF9E", part="body", j=(4), i = ~ Reassessment == "A") %>% 
+    bg(bg="#D2FFFA", part="body", j=(4), i = ~ Reassessment == "B") %>% 
+    bg(bg="#FEE8BC", part="body", j=(4), i = ~ Reassessment == "C") %>% 
+    bg(bg="#FFCCBD", part="body", j=(4), i = ~ Reassessment == "F") %>%
     bg(bg="#C4FF9E", part="body", j=(5), i = ~ Employer == "A") %>% 
     bg(bg="#D2FFFA", part="body", j=(5), i = ~ Employer == "B") %>% 
     bg(bg="#FEE8BC", part="body", j=(5), i = ~ Employer == "C") %>% 
