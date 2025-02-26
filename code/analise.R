@@ -52,7 +52,7 @@ AY2223 <- read.xlsx('data/2223.xlsx', 1)
 
 config$Outcome <- as.factor(config$Outcome)
 
-config <- inner_join(config, courses, by='Code')
+config <- inner_join(config, courses, by='Code', relationship = "many-to-many")
 
 config <- config[,c(1:3,9,5,4,6:8)]
 

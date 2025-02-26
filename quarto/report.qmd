@@ -1,0 +1,3897 @@
+---
+title: "Assurance of Learning"
+subtitle: "2023/2024 academic year"
+date: "`r Sys.Date()`"
+format:
+  pdf:
+    include-in-header:
+      - "suport/aol.template.tex"
+classoption: a4paper
+always_allow_html: yes
+editor: visual
+fontsize: 10pt
+title-block-style: none
+project:
+  output-dir: quarto/
+---
+
+```{r setup, include=FALSE, echo = FALSE}
+      load("all_data.Rdata")
+      knitr::opts_chunk$set(echo = TRUE, dev="cairo_pdf")
+      library(tidyverse)
+      library(extrafont)
+      library(ggthemes)
+      library(scales)
+      library(flextable)
+      library(officer)
+```
+
+\newpage
+\pagestyle{plain}
+
+# About {.unnumbered}
+
+This document offers a detailed account of the Assurance of Learning (AoL) developments and key changes for the 2022/2023 academic year. It outlines the processes and methodologies implemented during this period, ensuring clarity and transparency in our approach.
+
+Furthermore, it provides a comprehensive analysis of the results from the 2022/2023 academic year assessments, highlighting significant outcomes and findings that are essential for ongoing improvement.
+
+Based on the insights gathered, the document proposes well-considered recommendations for strategic initiatives and enhancements for the 2023/2024 academic year. These recommendations are designed to boost the effectiveness of the AoL process and align with our broader academic objectives, aiming to continuously improve the quality of education provided.
+
+\newpage
+
+\hypersetup{
+  colorlinks = true,
+  linkcolor = black,  % This makes internal links black
+  urlcolor = black,   % This makes URL links black
+  citecolor = black   % This makes citation links black
+}
+
+\tableofcontents
+
+\newpage
+
+\pagestyle{plain}
+
+# Executive summary
+
+\newpage
+
+# Assurance of Learning
+
+**Assurance of Learning** (AoL) is a continuous improvement process designed to evaluate whether students are effectively acquiring the competencies and skills that their programs intend to impart, and to adjust pedagogical practices accordingly. The goal of AoL is not to replace existing quality control mechanisms[^1] but to enhance them.
+
+[^1]: [Nova SIMAQ](https://www.unl.pt/en/nova/nova-simaq) - NOVA’s Internal Quality Monitoring and Evaluation System. It is aligned with the University’s Strategic Plan, covering all its activities and ensuring the involvement of all stakeholders (internal and external). It aims at the continuous improvement of NOVA’s Quality, responding to the legal requirement of implementing its own Quality assurance systems.
+
+Initially, quality control in education primarily focused on student satisfaction, course instructors' self-assessments, and adherence to pre-defined procedures. However, there was no explicit, systematic process for assessing the actual knowledge and competency acquisition by students. Such assessments were indirectly made by faculty and the academic director, based on the assumption that if individual course subjects aligned with program goals, and students were passing these courses, they would necessarily be acquiring the expected competencies and skills. This assumption underpinned the previous AoL approach, which relied on instructors' self-assessments and peer reviews. While this approach was supported by the faculty's and academic director's commitment to excellence and student development, it lacked direct and systematic evidence of actual competency acquisition.
+
+The Assurance of Learning process seeks to address this gap by providing a more structured and evidence-based assessment framework that complements the existing quality controls, ensuring a more robust and transparent measure of educational outcomes.
+
+## Goals
+
+The primary objective of the Assurance of Learning (AoL) is to ensure that students meet predefined program-level learning outcomes and to foster continuous quality improvement within academic programs. To achieve this, AoL first establishes specific Learning Outcomes (LOs) for each course. It then employs a predefined sampling strategy to assess the extent to which these outcomes have been achieved.
+
+Assessment occurs at the individual course level, with each course mapped against the overall program LOs to measure its contribution. Additionally, indirect measures of student learning are incorporated through surveys conducted by the Career Placement department, which gathers feedback from corporate recruiters, also alumni who have graduated within the last three years are surveyed. They are asked to rate, on a Likert scale, their agreement with statements describing their proficiency in each LO.
+
+This data triangulation strategy aims to create an interactive process where the acquisition of each LO is measured. The process identifies and addresses gaps, enhancing the educational experience.
+
+Currently, we are in a development phase focused on ensuring that LOs are a central consideration as faculty members develop syllabi. Faculty are expected to integrate LOs into their course materials, planning, and assessment practices. Additionally, any gaps identified in previous assessments are addressed by the Academic Directors during the program curriculum design and individual syllabus development phases.
+
+It is also important to recognize that program LOs are not static; they evolve over time to reflect changing student and market needs. Eventually, these LOs will need to be revisited and revised. In this context, the role of AoL is to ensure coherence across the program and course structures, swiftly incorporating any revisions to the LOs into the program structure and course content, and ensuring that outdated LOs are fully replaced by the new standards.
+
+# Structure
+
+To maintain coherence with both the school's ethos and the specific objectives of each program, the Assurance of Learning at Nova SBE is structured using a hierarchical approach (@fig-design). This structured approach begins with the core school values and cascades through program objectives down to specific learning outcomes.
+
+![Assurance of Learning design](figures/design.svg){#fig-design fig-align="center"}
+
+The process begins with our foundational school values and their reflection in the specific program objectives. These objectives are then mapped to LOs, ensuring that the core measures of the AoL process not only reflect Nova SBE's values but also effectively meet desired educational and professional standards.
+
+Further, we meticulously select Learning Outcomes for each academic year and identify precise moments within courses to assess these outcomes. This selection process is crucial for gathering relevant data and ensuring that the assessments accurately reflect the educational impact on our students.
+
+This leads into our yearly evaluation cycle, where we collect and analyze data to measure how well these outcomes are being achieved. This cycle is not only vital for continuous improvement but also ensures that our programs adapt to evolving educational and industry standards.
+
+## School Values {#sec-SV}
+
+We initiated our approach by focusing on our core values, which are integral to everything we do. As such, it's essential that the learning outcomes of our programs align with these foundational principles:
+
+-   Rigor
+-   Impact
+-   Worldliness
+-   Vanguardism
+-   Connectivity
+
+This alignment ensures not only coherence with our school’s ethos but also facilitates a structured and recognizable framework across all courses. This framework supports an easier understanding and implementation of the Assurance of Learning (AoL) process.
+
+Building on this foundation, we analyzed the current program objectives submitted to A3ES, the national accreditation agency. These objectives were crafted with Nova SBE’s values in mind. Our analysis revealed a common value matrix that intersects all programs and should be mirrored in the programs' Learning Outcomes (LOs). We also uncovered a latent structure that underlies the specific objectives of each program.
+
+Leveraging these shared values and the underlying structure common to all programs, we have developed six Learning Outcomes (LOs) for each program, ensuring that our educational goals are both ambitious and aligned with our institutional values.
+
+## Program Learning Outcome structure {#sec-PLOS}
+
+For each program, six learning outcomes have been established:
+
+-   Three are program-specific, meticulously designed to reflect the unique characteristics and educational objectives of each individual program.
+-   Three are universal, shared across all school programs, fostering a cohesive educational experience that embodies Nova SBE's ethos.
+
+This dual-layered framework not only captures the unique identity and specific learning outcomes of each program but also integrates Nova SBE's core values and DNA into every facet of our curriculum. This approach ensures that our overarching values are consistently represented across all program offerings, aligning individual program objectives with the broader institutional goals.
+
+### Specific Learning Outcomes
+
+The three specific learning outcomes differ from course to course at Nova SBE, yet they share a consistent thread that aligns with the school’s core values. This thread not only unites all courses but also shapes how students approach their educational and personal development within the institution.
+
+Accordingly, the specific learning outcomes for each course are strategically defined as follows:
+
+-   **I - Context Understanding**: Students develop a nuanced understanding of the broader context surrounding the subject area. This encompasses comprehending the environmental, economic, social, and technological factors that impact the field, equipping students with the ability to assess and interpret the dynamics that influence their studies.
+-   **II - Tool Application**: Students achieve proficiency in applying specialized tools and techniques learned during the course. This outcome focuses on the practical application of these tools, ensuring that students can effectively employ them in real-world situations, thereby bridging the gap between theoretical knowledge and practical implementation.
+-   **III - Theory Application**: Students are skilled at translating theoretical concepts into practical solutions. This involves applying academic theories to real-life challenges, demonstrating a deep understanding of how theoretical frameworks can be utilized to solve concrete problems.
+
+These outcomes are crafted to ensure that while each course maintains its unique focus and depth, the overall educational experience at Nova SBE remains consistent, integrated, and aligned with the school's values. This approach not only reinforces the relevance of each course within the broader educational aims of Nova SBE but also enhances the students’ ability to apply their learning in varied and complex real-world scenarios.
+
+### Universal Learning Outcomes
+
+Nova SBE is committed to cultivating professionals who embody a proactive 'go-get-it' attitude. We strive to develop individuals who engage in assertive and effective teamwork, possess the skills to both lead and collaborate, and recognize that their learning journey extends far beyond the classroom. With the mindset and tools to ensure continuous personal and professional growth, our students are prepared to make lasting impacts.
+
+Another key aspect that defines Nova SBE's ethos and internal culture is its commitment to having a positive impact. In line with this, during the academic year of 2022/2023, we introduced an additional Learning Outcome, LO VI, focused specifically on the dimensions of positive impact and sustainability. This new LO underscores Nova SBE's dedication to instilling these crucial values in its students, ensuring that they not only succeed in their careers but also contribute positively to society and the environment.
+
+Accordingly, the shared learning outcomes have been defined to reflect these ambitions:
+
+-   **IV - Interpersonal and Teamwork Skills**: Students will demonstrate effective interpersonal and communication skills, fostering productive teamwork and the capacity to pursue collaborative efforts successfully.
+
+-   **V - Intellectually Curious and Autonomous**: Students will develop analytical, critical thinking, and problem-solving skills that facilitate lifelong learning and autonomous professional development.
+
+-   **VI - Sustainable Values for Positive Impact**: Students will gain a holistic understanding of sustainable business and economic models, applying ethical, social, and environmental values to drive positive and transformative influences within projects and organizations.
+
+These outcomes ensure that our graduates not only meet the current standards of professional excellence but are also equipped to adapt and thrive in an ever-changing global landscape.
+
+## Courses and Program Learning Outcomes
+
+At the start of the Assurance of Learning process in 2021/2022, Learning Outcomes were carefully mapped to each program's mandatory courses and validated by Academic Directors to ensure every course supported the overall program goals. These mappings were rigorously confirmed for accuracy and relevance. Following any changes to mandatory courses—most notably the BSc restructuring in 2023/2024—the new courses were re-mapped and the updated maps were validated by Academic Directors.
+
+Starting in the 2023/2024 academic year, only two Learning Outcomes will be directly assessed each year—one specific to the program and one universal.
+
+## Defining the Learning outcomes
+
+For each learning goal, three proficiency levels were defined based on [Bloom's Taxonomy](https://en.wikipedia.org/wiki/Bloom's_taxonomy), structured as follows:
+
+-   **Developing**: The student is aware of and recognizes the importance of the competencies and skills defined by the Learning Outcome (LO).
+-   **Proficient**: The student can apply the competencies and skills defined by the LO in a limited capacity.
+-   **Expert**: The student has developed a deep knowledge and understanding of the competencies and skills defined by the LO and can apply them autonomously in various contexts beyond those explicitly taught in the program.
+
+## Assessing the Learning Outcomes {#sec-ALS}
+
+For the 2022/2023 cycle, we began using three distinct data sources to assess learning outcomes (@fig-data). To ensure consistency and clarity, the results from all sources are consolidated into a qualitative scale (A, B, C, F), providing an intuitive overview of performance. This section outlines the analysis process for each data source.
+
+![Assessment data sources](figures/LO_Assessment.svg){#fig-data fig-align="center"}
+
+Direct measures assess student learning by evaluating real work—like tests, presentations, or projects—that align with course objectives (@fig-data). They provide clear evidence of student skills and help validate our curriculum while highlighting areas that need improvement.
+
+Direct measures provide an objective snapshot of student learning through tests, projects, and presentations. However, they capture only a single point in time, and differences in course difficulty mean that systemic issues only emerge when data is collected over several years. This long-term approach helps us understand learning trends and curriculum effectiveness.
+
+Indirect measures, on the other hand, reveal how students, alumni, and employers perceive student competencies. For the 2023/2024 cycle, we have two years of indirect measure data. Tools like alumni and employer surveys show how well students develop the desired skills. Employer feedback is especially valuable because it offers an external view of how education meets real-world demands.
+
+While indirect measures don’t assess student learning directly, they provide a broader picture of a program’s impact. They complement direct measures by ensuring that the curriculum is both academically rigorous and aligned with industry needs.
+
+Combining both direct and indirect measures gives us a well-rounded view of educational effectiveness. This approach reduces bias, improves reliability, and helps us identify strengths and areas for improvement in our programs, ensuring our educational strategies meet both academic and professional standards.
+
+### Direct measures
+
+After mapping how each course contributes to the program’s defined Learning Outcomes (LOs), and with the assistance of the Academic Director, courses to be assessed were selected. For each chosen course, the professor responsible was directly contacted to help identify the assessment moment that best captures the relevant LO. Options for these assessment moments include:
+
+-   Exam
+-   Mid-term
+-   Term-paper
+-   Group project
+-   Specific exam question
+-   Peer assessment
+
+By integrating the measurement of Learning Outcomes into existing assessment formats, we aim to minimize disruption to the schedules of both professors and graders. Additionally, as the awareness of course learning outcomes becomes more ingrained in all parties involved, we anticipate a natural evolution where course assessments more effectively reflect and measure the intended outcomes.
+
+#### Defining targets
+
+Assessment moments will produce grades ranging from 0 to 20. For grading systems that do not adhere to this format, grades will be proportionally converted to this scale. To align these grades with the Assurance of Learning (AoL) goals, we have categorized them into three brackets:
+
+-   **Below Target**: Grades below 12, indicating that the student has either failed or barely passed the course.
+-   **On Target**: Grades between 12 and 16, signifying satisfactory to good performance.
+-   **Above Target**: Grades above 16, denoting excellent performance.
+
+To mitigate the potential for grade inflation and avoid it as an incentive, we have chosen to use the Total Percentage of Grades on Target and Above Target (TTAT) as the primary indicator. This metric, representing the combined percentage of grades that are On Target and Above Target, reflects the proportion of students achieving a passing grade in the assessment.
+
+#### Evaluating the results {#sec-EvDirect}
+
+To determine the extent to which the Learning Outcomes (LOs) are being achieved, the Total Percentage of Grades on Target and Above Target (TTAT) will be assessed according to the following scale:
+
+-   **A**: More than 90% TTAT - LO objectives fully achieved.
+-   **B**: Between 80% and 90% TTAT - LO objectives achieved.
+-   **C**: Between 60% and 80% TTAT - LO objectives insufficiently achieved.
+-   **F**: Below 60% TTAT - LO objectives not achieved.
+
+This scale ensures a clear and measurable indicator of student performance relative to the set learning objectives.
+
+::: {.callout-note appearance="simple"}
+Learning Outcomes that receive an 'F' rating will be reassessed in the following academic year during the same course and assessment moment, even if no assessment was originally planned for that LO. Then, in academic year n+2, if the LO still receives an '**F**' or '**C**' rating, it will be reassessed again in a different course. Similarly, LOs rated as '**C**' will be reassessed in a different course in the following academic year, with an additional assessment in year n+2 only if they again receive a '**C**' or '**F**' rating.
+:::
+
+### Indirect measures
+
+Indirect measures at Nova SBE utilize statement-based surveys where participants rate their agreement with statements that describe mastering the competencies of each Learning Outcome (LO). Administered biannually, these surveys are designed to capture a comprehensive overview of the alumni and employers' perspectives. Alumni surveys are typically integrated with end-of-program evaluations, while employer surveys are conducted during annual career fairs to ensure high participation rates and relevance. This method allows for the continual assessment of all Learning Outcomes each year, providing a consistent and reliable flow of feedback to inform program enhancements.
+
+<!-- Vou aqui -->
+
+#### Alumni surveys: {#sec-alumnisurv}
+
+The alumni surveys are comprised of straightforward, statement-based questionnaires in which recently graduated alumni rate, on a Likert scale from 1 to 6, their agreement with statements describing their achievement of the expert-level for each Learning Outcome (LO).
+
+This self-assessment serves as an indirect method for evaluating each LO, offering insights into the effectiveness with which the Learning Outcomes are being realized. The surveys are administered twice annually and are combined with other end-of-program questions that are designed to evaluate additional quality aspects of the programs.
+
+Given that this is an indirect measure requiring minimal time commitment from survey participants, it contrasts with the more targeted, direct LO assessments where only a sample of LOs is evaluated each year (four cycle assessments, plus additional reassessments as needed). Consequently, this method enables the comprehensive assessment of all LOs in every annual cycle.
+
+#### Employers surveys: {#sec-employsurv}
+
+Like the alumni surveys, the employers' surveys consist of statement-based questionnaires. In these surveys, employers rate, on a Likert scale from 1 to 6, their agreement with statements that describe how well they believe the alumni have achieved the expert-level for each Learning Outcome (LO).
+
+This method serves as an indirect way to evaluate each LO, providing insights into the practical effectiveness of the Learning Outcomes as perceived by employers. These surveys are conducted twice a year and are integrated with other queries designed to assess additional quality dimensions of the programs from an employer’s perspective.
+
+Like the alumni surveys, this is an indirect method requiring minimal time commitment from the participants, allowing for a comprehensive assessment of all LOs in each annual cycle. To maximize efficiency and ensure a high volume of responses, the surveys for the 2022/2023 cycle were conducted in person during the two career fairs held annually at Nova SBE's campus. Recruiters were initially asked to specify from which degree programs they recruit graduates. Subsequently, they were directed to complete surveys pertaining specifically to those programs.
+
+#### Defining targets:
+
+The indirect measures utilized in the surveys involve a Likert scale from 1 to 6, where respondents indicate their agreement with statements that assess the mastery of each Learning Outcome (LO). To align these responses with the Assurance of Learning (AoL) goals, we categorize them into three distinct performance brackets:
+
+-   **Below Target**: Responses below 4, indicating that the perceived mastery of competencies is inadequate or just below satisfactory.
+-   **On Target**: Responses between 4 and 5.5, signifying that the mastery of competencies is viewed as satisfactory to good.
+-   **Above Target**: Responses of 5.5 or higher, denoting excellent perceived mastery of competencies.
+
+To mitigate the potential for bias and ensure a balanced evaluation, we utilize the Total Percentage of Responses on Target and Above Target (TTAT) as the primary indicator. This metric reflects the combined percentage of responses falling within the On Target and Above Target categories and provides a clear measure of how well students believe they have achieved and can apply the program's Learning Outcomes in real-world contexts.
+
+#### Evaluating the results:
+
+Similarly to the direct measures, the evaluation of indirect measures also uses the Total Percentage of Responses on Target and Above Target (TTAT) to determine the extent to which the Learning Outcomes (LOs) are being achieved. For a matter of convenience and to maintain coherence across different types of assessments, the responses are assessed using the same thresholds as those applied in direct measures:
+
+-   **A**: More than 90% TTAT - LO objectives fully achieved.
+-   **B**: Between 80% and 90% TTAT - LO objectives substantially achieved.
+-   **C**: Between 60% and 80% TTAT - LO objectives insufficiently achieved.
+-   **F**: Below 60% TTAT - LO objectives not achieved.
+
+This approach ensures that both direct and indirect measures are aligned, providing a consistent and comprehensive assessment of student performance relative to the set learning objectives.
+
+::: {.callout-note appearance="simple"}
+Given that this was the first year these metrics were employed, and considering their nature as indirect, holistic measures, the majority of the outcomes were positive. This initial success indicates a promising start; however, internal discussions are ongoing to define the procedure for handling less than satisfactory results. The approach to fully integrating and triangulating these results with those from direct measures is still being refined to ensure a comprehensive and effective assessment framework.
+:::
+
+## Yearly assessment cycle
+
+The Yearly Assessment Cycle is a structured, continuous process designed to evaluate and enhance the effectiveness of our educational programs. This cycle ensures that we consistently monitor, analyze, and improve the learning outcomes and overall quality of education at Nova SBE. The cycle follows the [PDCA (Plan-Do-Check-Act)](https://en.wikipedia.org/wiki/PDCA) methodology, a proven framework for continuous improvement.
+
+The Yearly Assessment Cycle is an ongoing process, fostering a culture of continuous improvement. Each iteration of the cycle builds on the previous one, incorporating new insights and evolving to meet the changing needs of students and the industry. By maintaining this dynamic approach, we ensure that Nova SBE remains at the forefront of educational excellence.
+
+The key stages of the cycle are:
+
+### Select Learning Outcomes to Assess
+
+**Check**: The first step in the cycle involves selecting the specific Learning Outcomes (LOs) that will be assessed during the year. This selection is guided by the need to cover different LOs systematically over time, ensuring a comprehensive evaluation of all program objectives. By rotating the focus of assessment, we ensure that each LO is thoroughly examined and validated periodically. Additionally, any LOs and assessment moments flagged for reassessment in previous cycles will be included to address any identified gaps and verify improvements.
+
+### Collect Measures
+
+**Check**: In this stage, we gather data through various direct and indirect measures. Direct measures may include exams, projects, and presentations that provide tangible evidence of student competencies. Indirect measures involve feedback from alumni and employers through surveys, which offer insights into the perceived effectiveness of the educational programs. This combination of data sources helps to create a well-rounded understanding of how well students are meeting the LOs.
+
+### Analyze Data
+
+**Act**: Once the data is collected, it is analyzed to identify trends, strengths, and areas needing improvement. This analysis involves comparing the collected data against predefined benchmarks and standards. Based on the defined criteria, data points are classified into "below target," "on target," or "above target" categories. By calculating the total percentage of on target and above target (TATT), a qualitative evaluation of A, B, C, or F is assigned to the assessed LO. This process is performed for both direct measures and indirect measures, ensuring a comprehensive understanding of the extent to which the LOs are being achieved and identifying any gaps in the curriculum or instructional methods.
+
+### Results and Recommendations
+
+**Plan**: Based on the data analysis, we identify potential structural flaws in both the curricula and the courses themselves. By combining the evaluation and reevaluation of direct measures with indirect measures, we aim to understand if an issue is systematic or focused on a specific course or just a particular assessment moment. Based on this understanding, we select LOs and assessment moments for reassessment in the coming yearly cycles and generate reports that pinpoint where the Academic Directors need to focus their attention for continuous improvement of the programs.
+
+These findings are shared with the academic directors, relevant faculty and program administrators to guide their decision-making processes.
+
+### Implement changes
+
+**Do**: The final stage of the cycle involves implementing the recommended changes. Based on the identified issues, the academic directors of each program will meet with the relevant faculty to pinpoint root causes and develop improvement plans. If an issue is found to be systemic, the academic directors will review and potentially revise the curricula to address the broader concerns. This critical step ensures that the insights gained from the assessment process are translated into practical, actionable improvements. By closing the loop, we continually refine and elevate our educational offerings, ensuring they align more closely with Nova SBE's values and objectives. This iterative process fosters a culture of continuous improvement, enabling us to adapt and respond to evolving educational needs and industry standards.
+
+# Main changes in the 2022/2023 academic year
+
+As part of our commitment to continuous improvement, our focus extends beyond enhancing student competency and skill acquisition to refining the process itself. With this goal in mind, we implemented several enhancements in the 2022/2023 academic year, building upon the foundation established in 2021/2022. These changes were designed not only to improve the Assurance of Learning process but also to increase its data granularity and better align it with the school’s ethos.
+
+The changes implemented were:
+
+-   **Introduction of LO VI - Sustainable Values for Positive Impact**: This update introduces a dimension that is central to Nova SBE's values, which was previously dispersed among various program-specific LOs. With this change, the importance of our sustainability and impact values is now explicitly incorporated into the Assurance of Learning process. This aims to foster deeper reflection and integration of these values within individual course curricula. Additionally, minor adjustments were made to some of the existing program-specific LOs to avoid thematic overlap and ensure clarity in our educational objectives.
+-   **Alumni data**: To enhance data granularity, recently graduated alumni from most programs were surveyed to assess the extent to which they believe they acquired the competencies outlined in their program LOs. However, due to a timing mismatch between the data collection and the definition of LO VI, it was not possible to include this new data source for this specific LO in the academic year 2022/2023. Additionally, alumni from the PhD programs and the MScs in Impact Entrepreneurship & Innovation, and International Development and Public Policy were not included in this data gathering initiative. These groups will be included in the assessment cycle for the next academic year.
+-   **Employers data**: Similar to the alumni data, the granularity of data for the 2022/2023 academic year was enhanced through surveys from employers. However, as with the alumni data, a timing mismatch prevented the collection of information for LO VI. Additionally, recruiters from the PhD programs and the MScs in Impact Entrepreneurship & Innovation, and International Development and Public Policy were not included in this data gathering initiative. Given the broader dispersion of recruiters for graduates of these programs, we anticipate challenges in collecting this data in upcoming cycles.
+
+As we continue to refine and enhance the Assurance of Learning process at Nova SBE, these strategic improvements are crucial steps toward aligning our educational offerings more closely with our core values and the evolving needs of our students and society. Looking ahead, we are committed to incorporating all relevant stakeholders and data sources in our assessment processes to ensure a comprehensive and impactful evaluation of learning outcomes. Our ongoing efforts to integrate feedback and adapt to emerging challenges underscore our dedication to educational excellence and continuous improvement.
+
+# BSc in Economics
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 1
+
+```
+
+## Program objectives
+
+Based on Nova SBE's core values, the program objectives, which were previously defined and submitted to A3ES and international accreditation agencies, have been systematically mapped. This mapping process, as described in section @sec-SV, ensures alignment with our institutional ethos and educational goals for the program `{r} print.program.b(c)`.
+
+The @tbl-VO1, below, provides a detailed overview of how these objectives correspond to the learning outcomes, illustrating the integration of Nova SBE’s values into our educational framework:
+
+::: {#tbl-VO1}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+VO_table(c)
+
+```
+
+Nova SBE's values and Program objectives for the `{r} print.program.b(c)`
+:::
+
+## Learning Outcomes
+
+After evaluating the Program Objectives and their alignment with Nova SBE's core values, and considering the Learning Goals structure outlined in the section @sec-PLOS, we have defined the following **Learning Outcomes** for the program `{r} print.program.b(c)`, as detailed in the @tbl-LO1.
+
+::: {#tbl-LO1}
+```{r echo=FALSE, fig.align='center', , out.width="98%"}
+
+LO_table(c)
+
+```
+
+Program Learning Outcomes for the `{r} print.program.b(c)`
+:::
+
+These Learning Outcomes are described according to the three levels of proficiency defined in Section @sec-PLOS: Developing, Proficient, and Expert. @tbl-PLO1, below, outlines the levels of proficiency for the Learning Outcomes in the `{r} print.program.b(c)` program. Each Learning Outcome is mapped across three proficiency levels—Developing, Proficient, and Expert—detailing the competencies students are expected to demonstrate as they progress through the program.
+
+::: {#tbl-PLO1}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Prof_table(c)
+
+```
+
+Levels of Proficiency for Learning Outcomes in the `{r} print.program.b(c)`
+:::
+
+The defined Learning Outcomes contribute to achieving the program's pre-defined objectives, as detailed in the @tbl-OO1 of the [Appendix 1.A](#sec-app1). Additionally, the specific contributions of individual courses to each Learning Outcome, along with the corresponding levels of proficiency achieved, are detailed in @tbl-CO1, located in [Appendix 1.A](#sec-appcourse1).
+
+## 2022/2023 Academic year
+
+For the academic year 2022/2023, in accordance with the procedure defined in section @sec-ALS,the following courses were selected for the Learning Outcomes (LO) assessment process for the `{r} print.program.b(c)` program. The details of these courses and their respective contributions to the LO assessment are presented in the @tbl-ConifgLO1 below.
+
+::: {#tbl-ConifgLO1}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+config_table(c)
+
+```
+
+2022/2023 academic year Selected Learning Outcomes and respective courses for the `{r} print.program.b(c)`
+:::
+
+## Results
+
+The results for the `{r} print.program.b(c)` for the academic year of 2022/2023, were the following.
+
+### Direct Measures
+
+#### Learning Outcome II:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome III:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'III'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome V:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'V'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome VI:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'VI'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome II - Reassessment:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- TRUE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Overview
+
+The @tbl-KPIDirect1 below presents a summary of the results, for the `{r} print.program.b(c)`, from the direct measures of assessment for the academic year 2022/2023. The scores are presented on a scale of A, B, C, F, as defined in @sec-EvDirect.
+
+::: {#tbl-KPIDirect1}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_table(c)
+
+```
+
+Aggregated results of the direct measures for the `{r} print.program.b(c)`
+:::
+
+For **LO II**, it's noteworthy that while the revaluation in the course *Calculus II* maintained a rating of **C**, the regular assessment in *Econometrics* achieved a **A**. However, both **LO III** and **LO V** received a rating of **C**, indicating areas where performance meets basic expectations but could benefit from enhancement. Lastly, **LO VI** was rated **F**, highlighting a critical need for improvement in this area.
+
+### Indirect Measures
+
+#### Alumni surveys:
+
+Below, @tbl-KPIalumni1 provides a summary of the alumni survey results for the `{r} print.program.b(c)` during the 2022/2023 academic year. The scores, based on responses from `{r} print.alumni.num(c)` alumni, are reported on an A, B, C, F scale, as outlined in @sec-alumnisurv.
+
+::: {#tbl-KPIalumni1}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Alumni_table (c)
+
+```
+
+Results of the alumni surveys for the `{r} print.program.b(c)`
+:::
+
+#### Employers surveys:
+
+The results of the employer survey for the `{r} print.program.b(c)` in the 2022/2023 academic year are summarized in @tbl-KPIemploy1. Based on feedback from `{r} print.employers.num(c)` employers, the scores are presented on an A, B, C, F scale, as detailed in @sec-employsurv.
+
+::: {#tbl-KPIemploy1}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Employer_table (c)
+
+```
+
+Results of the employer surveys for the `{r} print.program.b(c)`
+:::
+
+### Integrated assurance overview {#sec-totalint1}
+
+The table below, @tbl-Total1, presents the integrated results for the program `{r} print.program.b(c)`, combining both direct and indirect measures of assessment. Data was triangulated as described in @sec-ALS, ensuring a comprehensive evaluation of the learning outcomes.
+
+::: {#tbl-Total1}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_total_table (c)
+
+```
+
+Integrated direct and indirect measures results for the `{r} print.program.b(c)`
+:::
+
+By integrating the various dimensions, including the indirect survey-based data from the 2021/2022 academic year, along with the reassessments and regular assessments from 2022/2023, we gain a comprehensive overview of the learning outcomes for the `{r} print.program.b(c)`.
+
+-   **Learning Outcome I**: While the overall evaluations are favorable, the occurrence of two **B** scores across different direct and indirect data points suggests that this Learning Outcome warrants closer attention in future academic years to ensure continued high performance.
+-   **Learning Outcome II**: Although both the initial assessment and reassessment of this LO in the *Calculus II* course received a score of **C** for the academic years 2021/2022 and 2022/2023, all other data points—both direct and indirect—were rated as **A**. This suggests that the issue is likely isolated to the Group I question on the course's final exam.
+-   **Learning Outcome III**: For this LO, which was assessed for the first time this academic year, both data points from the indirect assessments received a score of **B**, while the direct assessment data point received a **C**. This pattern suggests a potential weakness in the program, for this Learning Outcome, that may require closer attention.
+-   **Learning Outcome IV**: This outcome was directly measured in the academic year 2021/2022, receiving a score of **B**. In the following year, it was assessed solely through indirect measures, both of which received a score of **A**. Overall, all assessments for this outcome are positive.
+-   **Learning Outcome V**: The results here are mixed, with indirect data showing a score of **A** while direct data yields a score of **C**. A clearer understanding of this learning outcome's status should emerge as more data points are collected in the upcoming academic years.
+-   **Learning Outcome VI**: Currently, we only have a single direct data point for this LO, derived from the *final exam* results of the *Global Economics I* course, which yielded a score of **F**, with 48.21% of the assessments falling below target. This learning outcome requires reassessment in the 2023/2024 academic year to gain a more comprehensive understanding and address any underlying issues.
+
+## Outcomes and recomendations
+
+Based on the integrated results presented in @sec-totalint1, we have derived key insights that form the foundation of our ongoing evaluation and enhancement strategies.
+
+-   **Learning Outcome I**: Although the overall evaluations are positive, the recurrence of **B** scores in both direct and indirect assessments indicates that this LO should be monitored closely in the upcoming academic years. This LO is planned for a regular assessment in the upcoming 2023/2024 academic year.
+-   **Learning Outcome II**: The **C** scores observed in the *Calculus II* course over two consecutive academic years stand in contrast to the **A** ratings from other assessments. This discrepancy suggests that the issues may be isolated to specific components of the *Calculus II final exam*. It is recommended that the Academic Director collaborates with the lead course instructor to ensure that students are effectively developing the desired competencies. Given the recurrence of **C** assessments, we plan to reassess the same assessment moment in Calculus II during the 2023/2024 academic year, along with an additional assessment moment in another course, to gain a broader understanding of this Learning Outcome's performance.
+-   **Learning Outcome III**: This LO was assessed for the first time this academic year, with both indirect assessments receiving a score of **B** and the direct assessment scoring **C**, for *Advanced Microeconomics*. This pattern indicates a potential area of weakness within the program that warrants closer attention. To address this, we plan to reassess this LO in a different course during the next academic cycle. Additionally, the Academic Director should collaborate with the lead instructor of the *Advanced Microeconomics* course to identify and address any underlying factors contributing to the lower score.
+-   **Learning Outcome IV**: Positive results were observed for this LO, with a direct assessment score of **B** in 2021/2022 and A in both indirect assessments in the following year. For this LO is planned for a regular assessment in the upcoming 2023/2024 academic year.
+-   **Learning Outcome V**: Given that we had direct assessment with a score of **C**, in the course of *Statistics for Economics and Management*, this learning will be subject to a revaluation in the academic year of 2023/2024.
+-   **Learning Outcome VI**: The single direct assessment for this LO, resulting in an **F** from the *Global Economics I* final exam, with nearly half of the students falling below target, is a significant concern. Immediate reassessment is necessary in the 2023/2024 academic year, with a focus on identifying specific areas of improvement within this LO to ensure it aligns with the program's standards. The Academic Director should work closely with the lead instructor of the *Global Economics I* course to address any underlying issues contributing to the poor performance. Additionally, incorporating indirect measurements in the upcoming assessments will provide a more comprehensive view of the students' competencies and help identify broader trends that may be impacting this LO.
+
+Overall, while the integrated analysis suggests a generally positive outlook, the points of concern identified in specific Learning Outcomes highlight the need for focused interventions and reassessments. These targeted efforts will be essential to maintaining the overall quality and effectiveness of the program, ensuring that all Learning Outcomes are fully met and aligned with the program objectives.
+
+# BSc in Management
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 2
+
+```
+
+## Program objectives
+
+Based on Nova SBE's core values, the program objectives, which were previously defined and submitted to A3ES and international accreditation agencies, have been systematically mapped. This mapping process, as described in section @sec-SV, ensures alignment with our institutional ethos and educational goals for the program `{r} print.program.b(c)`.
+
+The @tbl-VO2, below, provides a detailed overview of how these objectives correspond to the learning outcomes, illustrating the integration of Nova SBE’s values into our educational framework:
+
+::: {#tbl-VO2}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+VO_table(c)
+
+```
+
+Nova SBE's values and Program objectives for the `{r} print.program.b(c)`
+:::
+
+## Learning Outcomes
+
+After evaluating the Program Objectives and their alignment with Nova SBE's core values, and considering the Learning Goals structure outlined in the section @sec-PLOS, we have defined the following **Learning Outcomes** for the program `{r} print.program.b(c)`, as detailed in the @tbl-LO2.
+
+::: {#tbl-LO2}
+```{r echo=FALSE, fig.align='center', , out.width="98%"}
+
+LO_table(c)
+
+```
+
+Program Learning Outcomes for the `{r} print.program.b(c)`
+:::
+
+These Learning Outcomes are described according to the three levels of proficiency defined in Section @sec-PLOS: Developing, Proficient, and Expert. @tbl-PLO2, below, outlines the levels of proficiency for the Learning Outcomes in the `{r} print.program.b(c)` program. Each Learning Outcome is mapped across three proficiency levels—Developing, Proficient, and Expert—detailing the competencies students are expected to demonstrate as they progress through the program.
+
+::: {#tbl-PLO2}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Prof_table(c)
+
+```
+
+Levels of Proficiency for Learning Outcomes in the `{r} print.program.b(c)`
+:::
+
+The defined Learning Outcomes contribute to achieving the program's pre-defined objectives, as detailed in the @tbl-OO2 of the [Appendix 2.A](#sec-app2). Additionally, the specific contributions of individual courses to each Learning Outcome, along with the corresponding levels of proficiency achieved, are detailed in @tbl-CO2, located in [Appendix 2.B](#sec-appcourse2).
+
+## 2022/2023 Academic year
+
+For the academic year 2022/2023, in accordance with the procedure defined in section @sec-ALS,the following courses were selected for the Learning Outcomes (LO) assessment process for the `{r} print.program.b(c)` program. The details of these courses and their respective contributions to the LO assessment are presented in the @tbl-ConifgLO2 below.
+
+::: {#tbl-ConifgLO2}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+config_table(c)
+
+```
+
+2022/2023 academic year Selected Learning Outcomes and respective courses for the `{r} print.program.b(c)`
+:::
+
+## Results
+
+The results for the `{r} print.program.b(c)` for the academic year of 2022/2023, were the following.
+
+### Direct Measures
+
+#### Learning Outcome II:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome III:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'III'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome V:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'V'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome VI:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'VI'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome II - Reassessment:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- TRUE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Overview
+
+The @tbl-KPIDirect2 below presents a summary of the results, for the `{r} print.program.b(c)`, from the direct measures of assessment for the academic year 2022/2023. The scores are presented on a scale of A, B, C, F, as defined in @sec-EvDirect.
+
+::: {#tbl-KPIDirect2}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_table(c)
+
+```
+
+Aggregated results of the direct measures for the `{r} print.program.b(c)`
+:::
+
+For **LO II**, it's noteworthy that while the revaluation in the course *Calculus II* maintained a rating of **C**, the regular assessment in *Data Analysis and Probability* achieved a **B**. However, **LO V** received a rating of **C**, indicating areas where performance meets basic expectations but could benefit from enhancement. Lastly, **LO VI** was rated **B**.
+
+### Indirect Measures
+
+#### Alumni surveys:
+
+Below, @tbl-KPIalumni2 provides a summary of the alumni survey results for the `{r} print.program.b(c)` during the 2022/2023 academic year. The scores, based on responses from `{r} print.alumni.num(c)` alumni, are reported on an A, B, C, F scale, as outlined in @sec-alumnisurv.
+
+::: {#tbl-KPIalumni2}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Alumni_table (c)
+
+```
+
+Results of the alumni surveys for the `{r} print.program.b(c)`
+:::
+
+#### Employers surveys:
+
+The results of the employer survey for the `{r} print.program.b(c)` in the 2022/2023 academic year are summarized in @tbl-KPIemploy2. Based on feedback from `{r} print.employers.num(c)` employers, the scores are presented on an A, B, C, F scale, as detailed in @sec-employsurv.
+
+::: {#tbl-KPIemploy2}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Employer_table (c)
+
+```
+
+Results of the employer surveys for the `{r} print.program.b(c)`
+:::
+
+### Integrated assurance overview {#sec-totalint2}
+
+The table below, @tbl-Total2, presents the integrated results for the program `{r} print.program.b(c)`, combining both direct and indirect measures of assessment. Data was triangulated as described in @sec-ALS, ensuring a comprehensive evaluation of the learning outcomes.
+
+::: {#tbl-Total2}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_total_table (c)
+
+```
+
+Integrated direct and indirect measures results for the `{r} print.program.b(c)`
+:::
+
+By integrating the various dimensions, including the indirect survey-based data, along with the reassessments and regular assessments from 2022/2023, we gain a comprehensive overview of the learning outcomes for the `{r} print.program.b(c)`.
+
+-   **Learning Outcome I**: The direct measurement from the 2021/2022 academic year yielded a **B**, while both indirect measurements were rated **A** for the current assessed academic year. This combination provides a positive overall assessment of this Learning Outcome, indicating positive performance across different evaluation methods.
+-   **Learning Outcome II**: Although both the initial assessment and reassessment of this LO in the *Calculus II* course received a score of **C** for the academic years 2021/2022 and 2022/2023, the gathered data points, for both direct and indirect—were rated as **B**, **A** and **A** respectively. This suggests that the issue is likely isolated to the Group I question on the course's final exam.
+-   **Learning Outcome III**: For this LO, all the data points present a score of A, indicating that students are consistently achieving the expected level of proficiency. This strong performance across multiple assessments suggests that the program is effectively meeting its objectives for this Learning Outcome.
+-   **Learning Outcome IV**: Every data point for this LO has received a score of A, reflecting consistent student achievement at the expected level of proficiency. These results indicate that the program is successfully fulfilling its objectives for this Learning Outcome.
+-   **Learning Outcome V**: The results for this LO are generally positive, indicating that the learning outcomes are being achieved. However, the **C** score for the final course assignment in *Statistics for Economics and Management* raises a potential concern that warrants further attention.
+-   **Learning Outcome VI**: At present, there is only a single direct data point for this LO, based on the *Group presentations and discussions* in the *Introduction to Modern and Contemporary History* course, which received a score of B. To gain a more comprehensive understanding of this learning outcome, additional indirect data will be collected in the 2023/2024 academic year.
+
+## Outcomes and recomendations
+
+Based on the integrated results presented in @sec-totalint2, we have derived key insights that form the foundation of our ongoing evaluation and enhancement strategies.
+
+-   **Learning Outcome I**: While the evaluations for this LO are positive, this LO will undergo regular planned assessment in the 2023/2024 academic year.
+-   **Learning Outcome II**: The consistent **C** scores in the *Calculus II* course over two academic years, contrasted with **B** and **A** ratings from the additional direct and indirect measures, indicate a potential issue in this LO. It is recommended that the Academic Director work closely with the course instructor to address any underlying issues and ensure that students are developing the necessary competencies. To gain a more comprehensive understanding, we will reassess the same assessment moment in *Calculus II* and introduce an additional assessment in another course during the 2023/2024 academic year.
+-   **Learning Outcome III**: For this LO, which was assessed for the first time this academic year, all data points received a score of **A**, reflecting consistent achievement of the expected level of proficiency across various assessments.
+-   **Learning Outcome IV**: The strong performance observed in all assessments for this LO, with consistent **A** scores across direct and indirect measurements, indicates that the program is effectively meeting its objectives.
+-   **Learning Outcome V**: The mixed results for this LO, with an **A** in indirect assessments but a **C** in the *Final course assignment* for the course *Statistics for Economics and Management*, suggest that further investigation is needed. We plan to reassess this LO in the 2023/2024 academic year to identify any areas of concern and ensure that the learning outcomes are being consistently achieved.
+-   **Learning Outcome VI**: The solitary direct assessment for this LO, based on the *Group presentations and discussions* in the *Introduction to Modern and Contemporary History* course, yielded a **B**. To gain a more comprehensive understanding, we will collect additional indirect data in the 2023/2024 academic year.
+
+Overall, while the integrated analysis highlights a positive trajectory in most areas, the identified concerns in specific Learning Outcomes underscore the importance of targeted interventions and reassessments. These efforts are crucial to maintaining the program's overall quality and ensuring that all Learning Outcomes are achieved, aligned with the program's objectives, and reflective of Nova SBE's educational standards.
+
+# MSc in Economics
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 14
+
+```
+
+## Program objectives
+
+Based on Nova SBE's core values, the program objectives, which were previously defined and submitted to A3ES and international accreditation agencies, have been systematically mapped. This mapping process, as described in section @sec-SV, ensures alignment with our institutional ethos and educational goals for the program `{r} print.program.b(c)`.
+
+The @tbl-VO14, below, provides a detailed overview of how these objectives correspond to the learning outcomes, illustrating the integration of Nova SBE’s values into our educational framework:
+
+::: {#tbl-VO14}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+VO_table(c)
+
+```
+
+Nova SBE's values and Program objectives for the `{r} print.program.b(c)`
+:::
+
+## Learning Outcomes
+
+After evaluating the Program Objectives and their alignment with Nova SBE's core values, and considering the Learning Goals structure outlined in the section @sec-PLOS, we have defined the following **Learning Outcomes** for the program `{r} print.program.b(c)`, as detailed in the @tbl-LO14.
+
+::: {#tbl-LO14}
+```{r echo=FALSE, fig.align='center', , out.width="98%"}
+
+LO_table(c)
+
+```
+
+Program Learning Outcomes for the `{r} print.program.b(c)`
+:::
+
+These Learning Outcomes are described according to the three levels of proficiency defined in Section @sec-PLOS: Developing, Proficient, and Expert. @tbl-PLO14, below, outlines the levels of proficiency for the Learning Outcomes in the `{r} print.program.b(c)` program. Each Learning Outcome is mapped across three proficiency levels—Developing, Proficient, and Expert—detailing the competencies students are expected to demonstrate as they progress through the program.
+
+::: {#tbl-PLO14}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Prof_table(c)
+
+```
+
+Levels of Proficiency for Learning Outcomes in the `{r} print.program.b(c)`
+:::
+
+The defined Learning Outcomes contribute to achieving the program's pre-defined objectives, as detailed in the @tbl-OO14 of the [Appendix 3.A](#sec-app14). Additionally, the specific contributions of individual courses to each Learning Outcome, along with the corresponding levels of proficiency achieved, are detailed in @tbl-CO14, located in [Appendix 3.B](#sec-appcourse14).
+
+## 2022/2023 Academic year
+
+For the academic year 2022/2023, in accordance with the procedure defined in section @sec-ALS,the following courses were selected for the Learning Outcomes (LO) assessment process for the `{r} print.program.b(c)` program. The details of these courses and their respective contributions to the LO assessment are presented in the @tbl-ConifgLO14 below.
+
+::: {#tbl-ConifgLO14}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+config_table(c)
+
+```
+
+2022/2023 academic year Selected Learning Outcomes and respective courses for the `{r} print.program.b(c)`
+:::
+
+## Results
+
+The results for the `{r} print.program.b(c)` for the academic year of 2022/2023, were the following.
+
+### Direct Measures
+
+#### Learning Outcome II:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome III:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'III'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome V:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'V'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome VI:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'VI'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Overview
+
+The @tbl-KPIDirect14 below presents a summary of the results, for the `{r} print.program.b(c)`, from the direct measures of assessment for the academic year 2022/2023. The scores are presented on a scale of A, B, C, F, as defined in @sec-EvDirect.
+
+::: {#tbl-KPIDirect14}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_table(c)
+
+```
+
+Aggregated results of the direct measures for the `{r} print.program.b(c)`
+:::
+
+Among all the Learning Outcomes, all were scored **A**, except for **LO II**, which received a **B**.
+
+### Indirect Measures
+
+#### Alumni surveys:
+
+Below, @tbl-KPIalumni14 provides a summary of the alumni survey results for the `{r} print.program.b(c)` during the 2022/2023 academic year. The scores, based on responses from `{r} print.alumni.num(c)` alumni, are reported on an A, B, C, F scale, as outlined in @sec-alumnisurv.
+
+::: {#tbl-KPIalumni14}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Alumni_table (c)
+
+```
+
+Results of the alumni surveys for the `{r} print.program.b(c)`
+:::
+
+#### Employers surveys:
+
+The results of the employer survey for the `{r} print.program.b(c)` in the 2022/2023 academic year are summarized in @tbl-KPIemploy14. Based on feedback from `{r} print.employers.num(c)` employers, the scores are presented on an A, B, C, F scale, as detailed in @sec-employsurv.
+
+::: {#tbl-KPIemploy14}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Employer_table (c)
+
+```
+
+Results of the employer surveys for the `{r} print.program.b(c)`
+:::
+
+### Integrated assurance overview {#sec-totalint14}
+
+The table below, @tbl-Total14, presents the integrated results for the program `{r} print.program.b(c)`, combining both direct and indirect measures of assessment. Data was triangulated as described in @sec-ALS, ensuring a comprehensive evaluation of the learning outcomes.
+
+::: {#tbl-Total14}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_total_table (c)
+
+```
+
+Integrated direct and indirect measures results for the `{r} print.program.b(c)`
+:::
+
+By incorporating the various dimensions, including indirect survey data and the reassessments and regular assessments from 2022/2023, we obtain a comprehensive view of the learning outcomes for the `{r} print.program.b(c)`. The results of this analysis are presented immediately below.
+
+-   **Learning Outcome II**: The direct measurement from the 2021/2022 academic year resulted in an **C**, and the subsequent reassessment of in the current academic yielded an **B**. Additionally, both indirect measurements were rated **A**. This indicates that there is no systemic issue with this outcome, requiring additional reassessments.
+-   **Learning Outcome III**: While both the direct measures and employer surveys yielded a score of **A**, the **C** score from the alumni survey highlights a potential issue with this LO that may require further investigation.
+-   **Learning Outcome V**: Building on last year's **C** score from the direct measure, this year's results, with all indicators scoring **A**, suggest that any previous concerns with this outcome have been effectively addressed and that no issues currently persist.
+
+## Outcomes and recomendations
+
+Based on the integrated results presented in @sec-totalint14, we have uncovered key insights that will inform our ongoing evaluation and enhancement strategies. Following this, we will detail the assessment plans for the upcoming year:
+
+-   **Learning Outcome I**: This learning outcome is scheduled for a routine assessment in the 2023/2024 academic year.
+-   **Learning Outcome III**: Due to the **C** score received in the alumni surveys, this LO will undergo reassessment through direct measurement in the 2023/2024 academic year.
+-   **Learning Outcome IV**: While the evaluations for this LO are positive, this LO will undergo regular planned assessment in the 2023/2024 academic year.
+
+Overall, the integrated analysis reveals a highly positive trajectory across all outcomes. However, the **C** score for **Learning Outcome III** in the alumni surveys raises a potential concern that warrants further attention. The Academic Director should emphasize the importance of this outcome within the program and ensure that course syllabi thoroughly address the application of key economic theories to real-world situations.
+
+# MSc in Management
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 15
+
+```
+
+## Program objectives
+
+Based on Nova SBE's core values, the program objectives, which were previously defined and submitted to A3ES and international accreditation agencies, have been systematically mapped. This mapping process, as described in section @sec-SV, ensures alignment with our institutional ethos and educational goals for the program `{r} print.program.b(c)`.
+
+The @tbl-VO15, below, provides a detailed overview of how these objectives correspond to the learning outcomes, illustrating the integration of Nova SBE’s values into our educational framework:
+
+::: {#tbl-VO15}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+VO_table(c)
+
+```
+
+Nova SBE's values and Program objectives for the `{r} print.program.b(c)`
+:::
+
+## Learning Outcomes
+
+After evaluating the Program Objectives and their alignment with Nova SBE's core values, and considering the Learning Goals structure outlined in the section @sec-PLOS, we have defined the following **Learning Outcomes** for the program `{r} print.program.b(c)`, as detailed in the @tbl-LO15.
+
+::: {#tbl-LO15}
+```{r echo=FALSE, fig.align='center', , out.width="98%"}
+
+LO_table(c)
+
+```
+
+Program Learning Outcomes for the `{r} print.program.b(c)`
+:::
+
+These Learning Outcomes are described according to the three levels of proficiency defined in Section @sec-PLOS: Developing, Proficient, and Expert. @tbl-PLO15, below, outlines the levels of proficiency for the Learning Outcomes in the `{r} print.program.b(c)` program. Each Learning Outcome is mapped across three proficiency levels—Developing, Proficient, and Expert—detailing the competencies students are expected to demonstrate as they progress through the program.
+
+::: {#tbl-PLO15}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Prof_table(c)
+
+```
+
+Levels of Proficiency for Learning Outcomes in the `{r} print.program.b(c)`
+:::
+
+The defined Learning Outcomes contribute to achieving the program's pre-defined objectives, as detailed in the @tbl-OO15 of the [Appendix 4.A](#sec-app15). Additionally, the specific contributions of individual courses to each Learning Outcome, along with the corresponding levels of proficiency achieved, are detailed in @tbl-CO15, located in [Appendix 4.B](#sec-appcourse15).
+
+## 2022/2023 Academic year
+
+For the academic year 2022/2023, in accordance with the procedure defined in section @sec-ALS,the following courses were selected for the Learning Outcomes (LO) assessment process for the `{r} print.program.b(c)` program. The details of these courses and their respective contributions to the LO assessment are presented in the @tbl-ConifgLO15 below.
+
+::: {#tbl-ConifgLO15}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+config_table(c)
+
+```
+
+2022/2023 academic year Selected Learning Outcomes and respective courses for the `{r} print.program.b(c)`
+:::
+
+## Results
+
+The results for the `{r} print.program.b(c)` for the academic year of 2022/2023, were the following.
+
+### Direct Measures
+
+#### Learning Outcome II:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome III:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'III'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome V:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'V'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome VI:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'VI'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome I - Reassessment:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'I'
+e <- TRUE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Overview
+
+The @tbl-KPIDirect15 below presents a summary of the results, for the `{r} print.program.b(c)`, from the direct measures of assessment for the academic year 2022/2023. The scores are presented on a scale of A, B, C, F, as defined in @sec-EvDirect.
+
+::: {#tbl-KPIDirect15}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_table(c)
+
+```
+
+Aggregated results of the direct measures for the `{r} print.program.b(c)`
+:::
+
+Of all the Learning Outcomes, only the revaluation of **LO I**, rendered a negative score, with a score of **F**.
+
+### Indirect Measures
+
+#### Alumni surveys:
+
+Below, @tbl-KPIalumni15 provides a summary of the alumni survey results for the `{r} print.program.b(c)` during the 2022/2023 academic year. The scores, based on responses from `{r} print.alumni.num(c)` alumni, are reported on an A, B, C, F scale, as outlined in @sec-alumnisurv.
+
+::: {#tbl-KPIalumni15}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Alumni_table (c)
+
+```
+
+Results of the alumni surveys for the `{r} print.program.b(c)`
+:::
+
+#### Employers surveys:
+
+The results of the employer survey for the `{r} print.program.b(c)` in the 2022/2023 academic year are summarized in @tbl-KPIemploy15. Based on feedback from `{r} print.employers.num(c)` employers, the scores are presented on an A, B, C, F scale, as detailed in @sec-employsurv.
+
+::: {#tbl-KPIemploy15}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Employer_table (c)
+
+```
+
+Results of the employer surveys for the `{r} print.program.b(c)`
+:::
+
+### Integrated assurance overview {#sec-totalint15}
+
+The table below, @tbl-Total15, presents the integrated results for the program `{r} print.program.b(c)`, combining both direct and indirect measures of assessment. Data was triangulated as described in @sec-ALS, ensuring a comprehensive evaluation of the learning outcomes.
+
+::: {#tbl-Total15}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_total_table (c)
+
+```
+
+Integrated direct and indirect measures results for the `{r} print.program.b(c)`
+:::
+
+By incorporating the various dimensions, including indirect survey data and the reassessments and regular assessments from 2022/2023, we obtain a comprehensive view of the learning outcomes for the `{r} print.program.b(c)`. Among the assessed learning outcomes, only **LO I** had a score different from **A**, with one instance receiving an **F**.
+
+-   **Learning Outcome I**: The direct measurement from the 2021/2022 academic year resulted in an **F**, and the subsequent reassessment of the same *Exam* in the *Financial Management* course also yielded an **F**. However, both indirect measurements were rated **A**. This suggests that the issue may be specific to the course in question rather than indicative of the overall program performance.
+
+## Outcomes and recomendations
+
+Drawing from the integrated results in @sec-totalint15, we have identified key insights that will guide our ongoing evaluation and improvement efforts. Following this, we will outline the assessment plans for the upcoming year:
+
+-   **Learning Outcome I**: Given that both direct measurements in the *Financial Management* course resulted in a score of **F**, this course will undergo another reassessment in the 2023/2024 academic year. Additionally, **LO I** will be evaluated through a regular assessment in a different course. This approach will help determine whether the issue is systemic within the program or specific to the *Financial Management* course. Regardless of future results, the Academic Director should collaborate with the lead instructor of *Financial Management* to address the issue and ensure that the course effectively contributes to the desired learning outcomes.
+-   **Learning Outcome IV**: While the evaluations for this LO are positive, this LO will undergo regular planned assessment in the 2023/2024 academic year.
+
+Overall, while the integrated analysis highlights a very positive trajectory in all areas, except for LO I, where we can identify a divergence between direct and indirect measures, which will be addressed by the Academic Director.
+
+# MSc in International Management
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 35
+
+```
+
+## Program objectives
+
+Based on Nova SBE's core values, the program objectives, which were previously defined and submitted to A3ES and international accreditation agencies, have been systematically mapped. This mapping process, as described in section @sec-SV, ensures alignment with our institutional ethos and educational goals for the program `{r} print.program.b(c)`.
+
+The @tbl-VO35, below, provides a detailed overview of how these objectives correspond to the learning outcomes, illustrating the integration of Nova SBE’s values into our educational framework:
+
+::: {#tbl-VO35}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+VO_table(c)
+
+```
+
+Nova SBE's values and Program objectives for the `{r} print.program.b(c)`
+:::
+
+## Learning Outcomes
+
+After evaluating the Program Objectives and their alignment with Nova SBE's core values, and considering the Learning Goals structure outlined in the section @sec-PLOS, we have defined the following **Learning Outcomes** for the program `{r} print.program.b(c)`, as detailed in the @tbl-LO35.
+
+::: {#tbl-LO35}
+```{r echo=FALSE, fig.align='center', , out.width="98%"}
+
+LO_table(c)
+
+```
+
+Program Learning Outcomes for the `{r} print.program.b(c)`
+:::
+
+These Learning Outcomes are described according to the three levels of proficiency defined in Section @sec-PLOS: Developing, Proficient, and Expert. @tbl-PLO35, below, outlines the levels of proficiency for the Learning Outcomes in the `{r} print.program.b(c)` program. Each Learning Outcome is mapped across three proficiency levels—Developing, Proficient, and Expert—detailing the competencies students are expected to demonstrate as they progress through the program.
+
+::: {#tbl-PLO35}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Prof_table(c)
+
+```
+
+Levels of Proficiency for Learning Outcomes in the `{r} print.program.b(c)`
+:::
+
+The defined Learning Outcomes contribute to achieving the program's pre-defined objectives, as detailed in the @tbl-OO35 of the [Appendix 5.A](#sec-app35). Additionally, the specific contributions of individual courses to each Learning Outcome, along with the corresponding levels of proficiency achieved, are detailed in @tbl-CO35, located in [Appendix 5.B](#sec-appcourse35).
+
+## 2022/2023 Academic year
+
+For the academic year 2022/2023, in accordance with the procedure defined in section @sec-ALS,the following courses were selected for the Learning Outcomes (LO) assessment process for the `{r} print.program.b(c)` program. The details of these courses and their respective contributions to the LO assessment are presented in the @tbl-ConifgLO35 below.
+
+::: {#tbl-ConifgLO35}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+config_table(c)
+
+```
+
+2022/2023 academic year Selected Learning Outcomes and respective courses for the `{r} print.program.b(c)`
+:::
+
+## Results
+
+The results for the `{r} print.program.b(c)` for the academic year of 2022/2023, were the following.
+
+### Direct Measures
+
+#### Learning Outcome II:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome III:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'III'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome V:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'V'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome VI:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'VI'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome I - Reassessment:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'I'
+e <- TRUE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Overview
+
+The @tbl-KPIDirect35 below presents a summary of the results, for the `{r} print.program.b(c)`, from the direct measures of assessment for the academic year 2022/2023. The scores are presented on a scale of A, B, C, F, as defined in @sec-EvDirect.
+
+::: {#tbl-KPIDirect35}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_table(c)
+
+```
+
+Aggregated results of the direct measures for the `{r} print.program.b(c)`
+:::
+
+Of all the Learning Outcomes, only the revaluation of **LO I**, rendered a negative score, with a score of **F**.
+
+### Indirect Measures
+
+#### Alumni surveys:
+
+Below, @tbl-KPIalumni35 provides a summary of the alumni survey results for the `{r} print.program.b(c)` during the 2022/2023 academic year. The scores, based on responses from `{r} print.alumni.num(c)` alumni, are reported on an A, B, C, F scale, as outlined in @sec-alumnisurv.
+
+::: {#tbl-KPIalumni35}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Alumni_table (c)
+
+```
+
+Results of the alumni surveys for the `{r} print.program.b(c)`
+:::
+
+#### Employers surveys:
+
+The results of the employer survey for the `{r} print.program.b(c)` in the 2022/2023 academic year are summarized in @tbl-KPIemploy35. Based on feedback from `{r} print.employers.num(c)` employers, the scores are presented on an A, B, C, F scale, as detailed in @sec-employsurv.
+
+::: {#tbl-KPIemploy35}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Employer_table (c)
+
+```
+
+Results of the employer surveys for the `{r} print.program.b(c)`
+:::
+
+### Integrated assurance overview {#sec-totalint35}
+
+The table below, @tbl-Total35, presents the integrated results for the program `{r} print.program.b(c)`, combining both direct and indirect measures of assessment. Data was triangulated as described in @sec-ALS, ensuring a comprehensive evaluation of the learning outcomes.
+
+::: {#tbl-Total35}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_total_table (c)
+
+```
+
+Integrated direct and indirect measures results for the `{r} print.program.b(c)`
+:::
+
+By incorporating the various dimensions, including indirect survey data and the reassessments and regular assessments from 2022/2023, we obtain a comprehensive view of the learning outcomes for the `{r} print.program.b(c)`. Among the assessed learning outcomes, only **LO I** had a score different from **A**, with one instance receiving an **F**.
+
+-   **Learning Outcome I**: The direct measurement from the 2021/2022 academic year resulted in an **C**, and the subsequent reassessment of the same *Exam* in the *Financial Management* course yielded an **F**. However, both indirect measurements were rated **A**. This suggests that the issue may be specific to the course in question rather than indicative of the overall program performance.
+
+## Outcomes and recomendations
+
+Building on the integrated findings detailed in @sec-totalint35, we have pinpointed a few key insights that will shape our ongoing evaluation and enhancement strategies. We will also outline the assessment plans for the forthcoming academic year:
+
+-   **Learning Outcome I**: Direct assessments in the *Financial Management* course have resulted in an **F**, this academic year, and **C** in the past academic year. As a result, this course will be reassessed in the 2023/2024 academic year, alongside a regular assessment of **LO I** in a different course. This dual approach will help determine whether the issue is isolated to the *Financial Management* course or indicative of a broader, program-wide concern. Irrespective of the outcome, the Academic Director should work closely with the lead instructor of *Financial Management* to address these challenges and ensure that the course contributes effectively to the program’s learning outcomes.
+-   **Learning Outcome IV**: Despite positive evaluations for this LO, it will still undergo the planned regular assessment in the 2023/2024 academic year to maintain its trajectory.
+
+In summary, while the integrated analysis indicates a generally positive trend across all areas, **LO I** stands out due to the discrepancy between direct and indirect measures, which will be a focus for the Academic Director moving forward.
+
+# MSc in Finance
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 16
+
+```
+
+## Program objectives
+
+Based on Nova SBE's core values, the program objectives, which were previously defined and submitted to A3ES and international accreditation agencies, have been systematically mapped. This mapping process, as described in section @sec-SV, ensures alignment with our institutional ethos and educational goals for the program `{r} print.program.b(c)`.
+
+The @tbl-VO16, below, provides a detailed overview of how these objectives correspond to the learning outcomes, illustrating the integration of Nova SBE’s values into our educational framework:
+
+::: {#tbl-VO16}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+VO_table(c)
+
+```
+
+Nova SBE's values and Program objectives for the `{r} print.program.b(c)`
+:::
+
+## Learning Outcomes
+
+After evaluating the Program Objectives and their alignment with Nova SBE's core values, and considering the Learning Goals structure outlined in the section @sec-PLOS, we have defined the following **Learning Outcomes** for the program `{r} print.program.b(c)`, as detailed in the @tbl-LO16.
+
+::: {#tbl-LO16}
+```{r echo=FALSE, fig.align='center', , out.width="98%"}
+
+LO_table(c)
+
+```
+
+Program Learning Outcomes for the `{r} print.program.b(c)`
+:::
+
+These Learning Outcomes are described according to the three levels of proficiency defined in Section @sec-PLOS: Developing, Proficient, and Expert. @tbl-PLO16, below, outlines the levels of proficiency for the Learning Outcomes in the `{r} print.program.b(c)` program. Each Learning Outcome is mapped across three proficiency levels—Developing, Proficient, and Expert—detailing the competencies students are expected to demonstrate as they progress through the program.
+
+::: {#tbl-PLO16}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Prof_table(c)
+
+```
+
+Levels of Proficiency for Learning Outcomes in the `{r} print.program.b(c)`
+:::
+
+The defined Learning Outcomes contribute to achieving the program's pre-defined objectives, as detailed in the @tbl-OO16 of the [Appendix 6.A](#sec-app16). Additionally, the specific contributions of individual courses to each Learning Outcome, along with the corresponding levels of proficiency achieved, are detailed in @tbl-CO16, located in [Appendix 6.B](#sec-appcourse16).
+
+## 2022/2023 Academic year
+
+For the academic year 2022/2023, in accordance with the procedure defined in section @sec-ALS,the following courses were selected for the Learning Outcomes (LO) assessment process for the `{r} print.program.b(c)` program. The details of these courses and their respective contributions to the LO assessment are presented in the @tbl-ConifgLO16 below.
+
+::: {#tbl-ConifgLO16}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+config_table(c)
+
+```
+
+2022/2023 academic year Selected Learning Outcomes and respective courses for the `{r} print.program.b(c)`
+:::
+
+## Results
+
+The results for the `{r} print.program.b(c)` for the academic year of 2022/2023, were the following.
+
+### Direct Measures
+
+#### Learning Outcome II:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome III:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'III'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome V:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'V'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome VI:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'VI'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome II - Reassessment:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- TRUE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Overview
+
+The @tbl-KPIDirect16 below presents a summary of the results, for the `{r} print.program.b(c)`, from the direct measures of assessment for the academic year 2022/2023. The scores are presented on a scale of A, B, C, F, as defined in @sec-EvDirect.
+
+::: {#tbl-KPIDirect16}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_table(c)
+
+```
+
+Aggregated results of the direct measures for the `{r} print.program.b(c)`
+:::
+
+Among all the Learning Outcomes, only the reassessment of **LO II**, conducted on the *final exam - Part II* of the *Corporate Finance* course, resulted in a negative score of **F**. Additionally, **LO V** received a score of **B**.
+
+### Indirect Measures
+
+#### Alumni surveys:
+
+Below, @tbl-KPIalumni16 provides a summary of the alumni survey results for the `{r} print.program.b(c)` during the 2022/2023 academic year. The scores, based on responses from `{r} print.alumni.num(c)` alumni, are reported on an A, B, C, F scale, as outlined in @sec-alumnisurv.
+
+::: {#tbl-KPIalumni16}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Alumni_table (c)
+
+```
+
+Results of the alumni surveys for the `{r} print.program.b(c)`
+:::
+
+#### Employers surveys:
+
+The results of the employer survey for the `{r} print.program.b(c)` in the 2022/2023 academic year are summarized in @tbl-KPIemploy16. Based on feedback from `{r} print.employers.num(c)` employers, the scores are presented on an A, B, C, F scale, as detailed in @sec-employsurv.
+
+::: {#tbl-KPIemploy16}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Employer_table (c)
+
+```
+
+Results of the employer surveys for the `{r} print.program.b(c)`
+:::
+
+### Integrated assurance overview {#sec-totalint16}
+
+The table below, @tbl-Total16, presents the integrated results for the program `{r} print.program.b(c)`, combining both direct and indirect measures of assessment. Data was triangulated as described in @sec-ALS, ensuring a comprehensive evaluation of the learning outcomes.
+
+::: {#tbl-Total16}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_total_table (c)
+
+```
+
+Integrated direct and indirect measures results for the `{r} print.program.b(c)`
+:::
+
+By integrating various dimensions, such as indirect survey data alongside reassessments and regular assessments from 2022/2023, we gain a comprehensive understanding of the learning outcomes for the `{r} print.program.b(c)`. The findings from this analysis are presented just below:
+
+-   **Learning Outcome II**: The direct assessment in the 2021/2022 academic year yielded an **F** on the *final exam - part II* of the *Corporate Finance* course, and a subsequent reassessment in the current academic year also resulted in an **F**. However, the regular assessment of this same LO yielded a score of **A**, and both indirect measurements were also rated **A**. This suggests that there is no systemic issue with this learning outcome and that the concern is likely confined to the Corporate Finance course.
+
+All remaining LOs demonstrated positive results across both direct and indirect measurements.
+
+## Outcomes and recomendations
+
+Based on the integrated results presented in @sec-totalint16, there are no major areas of concern, with the exception of the *Corporate Finance course*. Therefore, the recommendations and actions for 2023/2024 are as follows:
+
+-   **Learning Outcome I**: This outcome is set for a regular assessment during the 2023/2024 academic year.
+-   **Learning Outcome II**: Although there is no indication of a systemic issue with this Learning Outcome—evidenced by the **A** scores across all data points except those related to the *Corporate Finance* course—the recurring **F** scores in the *final exam - part II* of *Corporate Finance* remain a concern. Therefore, this assessment moment will be reassessed in the 2023/2024 academic year. The Academic Director should collaborate with the lead course instructor to determine whether these low scores are due to a particularly challenging exam question or if they reflect a broader issue in the course where students are not adequately developing the required competencies.
+-   **Learning Outcome IV**: This learning outcome is planned for its standard assessment in the 2023/2024 academic year.
+
+# MSc in International Finance
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 36
+
+```
+
+## Program objectives
+
+Based on Nova SBE's core values, the program objectives, which were previously defined and submitted to A3ES and international accreditation agencies, have been systematically mapped. This mapping process, as described in section @sec-SV, ensures alignment with our institutional ethos and educational goals for the program `{r} print.program.b(c)`.
+
+The @tbl-VO36, below, provides a detailed overview of how these objectives correspond to the learning outcomes, illustrating the integration of Nova SBE’s values into our educational framework:
+
+::: {#tbl-VO36}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+VO_table(c)
+
+```
+
+Nova SBE's values and Program objectives for the `{r} print.program.b(c)`
+:::
+
+## Learning Outcomes
+
+After evaluating the Program Objectives and their alignment with Nova SBE's core values, and considering the Learning Goals structure outlined in the section @sec-PLOS, we have defined the following **Learning Outcomes** for the program `{r} print.program.b(c)`, as detailed in the @tbl-LO36.
+
+::: {#tbl-LO36}
+```{r echo=FALSE, fig.align='center', , out.width="98%"}
+
+LO_table(c)
+
+```
+
+Program Learning Outcomes for the `{r} print.program.b(c)`
+:::
+
+These Learning Outcomes are described according to the three levels of proficiency defined in Section @sec-PLOS: Developing, Proficient, and Expert. @tbl-PLO36, below, outlines the levels of proficiency for the Learning Outcomes in the `{r} print.program.b(c)` program. Each Learning Outcome is mapped across three proficiency levels—Developing, Proficient, and Expert—detailing the competencies students are expected to demonstrate as they progress through the program.
+
+::: {#tbl-PLO36}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Prof_table(c)
+
+```
+
+Levels of Proficiency for Learning Outcomes in the `{r} print.program.b(c)`
+:::
+
+The defined Learning Outcomes contribute to achieving the program's pre-defined objectives, as detailed in the @tbl-OO36 of the [Appendix 7.A](#sec-app36). Additionally, the specific contributions of individual courses to each Learning Outcome, along with the corresponding levels of proficiency achieved, are detailed in @tbl-CO36, located in [Appendix 7.B](#sec-appcourse36).
+
+## 2022/2023 Academic year
+
+For the academic year 2022/2023, in accordance with the procedure defined in section @sec-ALS,the following courses were selected for the Learning Outcomes (LO) assessment process for the `{r} print.program.b(c)` program. The details of these courses and their respective contributions to the LO assessment are presented in the @tbl-ConifgLO36 below.
+
+::: {#tbl-ConifgLO36}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+config_table(c)
+
+```
+
+2022/2023 academic year Selected Learning Outcomes and respective courses for the `{r} print.program.b(c)`
+:::
+
+## Results
+
+The results for the `{r} print.program.b(c)` for the academic year of 2022/2023, were the following.
+
+### Direct Measures
+
+#### Learning Outcome II:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome III:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'III'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome V:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'V'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome VI:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'VI'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome II - Reassessment:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- TRUE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Overview
+
+The @tbl-KPIDirect36 below presents a summary of the results, for the `{r} print.program.b(c)`, from the direct measures of assessment for the academic year 2022/2023. The scores are presented on a scale of A, B, C, F, as defined in @sec-EvDirect.
+
+::: {#tbl-KPIDirect36}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_table(c)
+
+```
+
+Aggregated results of the direct measures for the `{r} print.program.b(c)`
+:::
+
+Among all the Learning Outcomes, only the reassessment of **LO II**, conducted on the *final exam - Part II* of the *Corporate Finance* course, resulted in a negative score of **F**. Additionally, **LO V** received a score of **C**.
+
+### Indirect Measures
+
+#### Alumni surveys:
+
+Below, @tbl-KPIalumni36 provides a summary of the alumni survey results for the `{r} print.program.b(c)` during the 2022/2023 academic year. The scores, based on responses from `{r} print.alumni.num(c)` alumni, are reported on an A, B, C, F scale, as outlined in @sec-alumnisurv.
+
+::: {#tbl-KPIalumni36}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Alumni_table (c)
+
+```
+
+Results of the alumni surveys for the `{r} print.program.b(c)`
+:::
+
+#### Employers surveys:
+
+The results of the employer survey for the `{r} print.program.b(c)` in the 2022/2023 academic year are summarized in @tbl-KPIemploy36. Based on feedback from `{r} print.employers.num(c)` employers, the scores are presented on an A, B, C, F scale, as detailed in @sec-employsurv.
+
+::: {#tbl-KPIemploy36}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Employer_table (c)
+
+```
+
+Results of the employer surveys for the `{r} print.program.b(c)`
+:::
+
+### Integrated assurance overview {#sec-totalint36}
+
+The table below, @tbl-Total36, presents the integrated results for the program `{r} print.program.b(c)`, combining both direct and indirect measures of assessment. Data was triangulated as described in @sec-ALS, ensuring a comprehensive evaluation of the learning outcomes.
+
+::: {#tbl-Total36}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_total_table (c)
+
+```
+
+Integrated direct and indirect measures results for the `{r} print.program.b(c)`
+:::
+
+By integrating various dimensions, such as indirect survey data alongside reassessments and regular assessments from 2022/2023, we gain a comprehensive understanding of the learning outcomes for the `{r} print.program.b(c)`. The findings from this analysis are presented just below:
+
+-   **Learning Outcome II**: The direct assessment in the 2021/2022 academic year yielded an **F** on the *final exam - part II* of the *Corporate Finance* course, and a subsequent reassessment in the current academic year also resulted in an **F**. However, the regular assessment of this same LO yielded a score of **A**, and both indirect measurements were also rated **A**. This suggests that there is no systemic issue with this learning outcome and that the concern is likely confined to the Corporate Finance course.
+-   **Learning Outcome V**: The assessment on the *final exam* of the *Investments* course resulted in a score of **C**; however, considering the TATT was 75%, and the remaining data points—both direct and indirect measures—scored **A**, this suggests that the issue is not systemic. Therefore, no additional actions are deemed necessary at this time.
+
+All remaining LOs demonstrated positive results across both direct and indirect measurements.
+
+## Outcomes and recomendations
+
+Drawing from the integrated results in @sec-totalint36, it appears that there are no significant concerns, except for the Corporate Finance course. As a result, the recommendations and actions for 2023/2024 are as follows:
+
+-   **Learning Outcome I**: This learning outcome is scheduled for a routine assessment in the 2023/2024 academic year.
+-   **Learning Outcome II**: Although there is no indication of a systemic issue with this Learning Outcome—demonstrated by the consistent A scores across all data points aside from those associated with the Corporate Finance course—the repeated F scores in the final exam - part II of Corporate Finance are still concerning. Therefore, this assessment moment will undergo reassessment in the 2023/2024 academic year. The Academic Director should work closely with the lead course instructor to determine whether the low scores stem from a particularly difficult exam question or reflect a broader issue in the course that is preventing students from fully developing the required competencies.
+-   **Learning Outcome IV**: This outcome is slated for its regular assessment during the 2023/2024 academic year.
+
+# MSc in Business Analytics
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 37
+
+```
+
+## Program objectives
+
+Based on Nova SBE's core values, the program objectives, which were previously defined and submitted to A3ES and international accreditation agencies, have been systematically mapped. This mapping process, as described in section @sec-SV, ensures alignment with our institutional ethos and educational goals for the program `{r} print.program.b(c)`.
+
+The @tbl-VO37, below, provides a detailed overview of how these objectives correspond to the learning outcomes, illustrating the integration of Nova SBE’s values into our educational framework:
+
+::: {#tbl-VO37}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+VO_table(c)
+
+```
+
+Nova SBE's values and Program objectives for the `{r} print.program.b(c)`
+:::
+
+## Learning Outcomes
+
+After evaluating the Program Objectives and their alignment with Nova SBE's core values, and considering the Learning Goals structure outlined in the section @sec-PLOS, we have defined the following **Learning Outcomes** for the program `{r} print.program.b(c)`, as detailed in the @tbl-LO37.
+
+::: {#tbl-LO37}
+```{r echo=FALSE, fig.align='center', , out.width="98%"}
+
+LO_table(c)
+
+```
+
+Program Learning Outcomes for the `{r} print.program.b(c)`
+:::
+
+These Learning Outcomes are described according to the three levels of proficiency defined in Section @sec-PLOS: Developing, Proficient, and Expert. @tbl-PLO37, below, outlines the levels of proficiency for the Learning Outcomes in the `{r} print.program.b(c)` program. Each Learning Outcome is mapped across three proficiency levels—Developing, Proficient, and Expert—detailing the competencies students are expected to demonstrate as they progress through the program.
+
+::: {#tbl-PLO37}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Prof_table(c)
+
+```
+
+Levels of Proficiency for Learning Outcomes in the `{r} print.program.b(c)`
+:::
+
+The defined Learning Outcomes contribute to achieving the program's pre-defined objectives, as detailed in the @tbl-OO37 of the [Appendix 8.A](#sec-app37). Additionally, the specific contributions of individual courses to each Learning Outcome, along with the corresponding levels of proficiency achieved, are detailed in @tbl-CO37, located in [Appendix 8.B](#sec-appcourse37).
+
+## 2022/2023 Academic year
+
+For the academic year 2022/2023, in accordance with the procedure defined in section @sec-ALS,the following courses were selected for the Learning Outcomes (LO) assessment process for the `{r} print.program.b(c)` program. The details of these courses and their respective contributions to the LO assessment are presented in the @tbl-ConifgLO37 below.
+
+::: {#tbl-ConifgLO37}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+config_table(c)
+
+```
+
+2022/2023 academic year Selected Learning Outcomes and respective courses for the `{r} print.program.b(c)`
+:::
+
+## Results
+
+The results for the `{r} print.program.b(c)` for the academic year of 2022/2023, were the following.
+
+### Direct Measures
+
+#### Learning Outcome II:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome III:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'III'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome V:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'V'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome VI:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'VI'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome I - Reassessment:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'I'
+e <- TRUE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Overview
+
+The @tbl-KPIDirect37 below presents a summary of the results, for the `{r} print.program.b(c)`, from the direct measures of assessment for the academic year 2022/2023. The scores are presented on a scale of A, B, C, F, as defined in @sec-EvDirect.
+
+::: {#tbl-KPIDirect37}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_table(c)
+
+```
+
+Aggregated results of the direct measures for the `{r} print.program.b(c)`
+:::
+
+Among all the Learning Outcomes, only the reassessment of **LO I**, a revaluation, conducted on the *exam* of the *Modeling Business Decisions* course, resulted in a negative score of **C**.
+
+### Indirect Measures
+
+#### Alumni surveys:
+
+Below, @tbl-KPIalumni37 provides a summary of the alumni survey results for the `{r} print.program.b(c)` during the 2022/2023 academic year. The scores, based on responses from `{r} print.alumni.num(c)` alumni, are reported on an A, B, C, F scale, as outlined in @sec-alumnisurv.
+
+::: {#tbl-KPIalumni37}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Alumni_table (c)
+
+```
+
+Results of the alumni surveys for the `{r} print.program.b(c)`
+:::
+
+#### Employers surveys:
+
+The results of the employer survey for the `{r} print.program.b(c)` in the 2022/2023 academic year are summarized in @tbl-KPIemploy37. Based on feedback from `{r} print.employers.num(c)` employers, the scores are presented on an A, B, C, F scale, as detailed in @sec-employsurv.
+
+::: {#tbl-KPIemploy37}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Employer_table (c)
+
+```
+
+Results of the employer surveys for the `{r} print.program.b(c)`
+:::
+
+### Integrated assurance overview {#sec-totalint37}
+
+The table below, @tbl-Total37, presents the integrated results for the program `{r} print.program.b(c)`, combining both direct and indirect measures of assessment. Data was triangulated as described in @sec-ALS, ensuring a comprehensive evaluation of the learning outcomes.
+
+::: {#tbl-Total37}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_total_table (c)
+
+```
+
+Integrated direct and indirect measures results for the `{r} print.program.b(c)`
+:::
+
+By incorporating multiple dimensions, including indirect survey data along with the reassessments and regular assessments from 2022/2023, we achieve a comprehensive understanding of the learning outcomes for the `{r} print.program.b(c)`. The only area of concern is **LO I**:
+
+-   **Learning Outcome I**: The direct assessment in the 2021/2022 academic year resulted in an **F** on the *exam* of the *Modeling Business Decisions* course, with a subsequent reassessment in the current academic year yielding a **C**. Additionally, the alumni survey was scored with a **B**. Together, this data suggests a potential systemic issue that warrants further investigation.
+
+All other LOs showed positive outcomes in both direct and indirect assessments.
+
+## Outcomes and recomendations
+
+Drawing from the integrated results in @sec-totalint37, we have identified crucial insights that underpin our continuous evaluation and improvement strategies. Consequently, the recommendations and actions for 2023/2024 are as follows:
+
+-   **Learning Outcome I**: This learning outcome is scheduled for a standard assessment in the 2023/2024 academic year. Additionally, a reassessment will be conducted on the *exam* of the *Modeling Business Decisions* course. With this reassessment, along with new indirect data gathered during the upcoming academic year, we aim to determine whether the issue is systemic or specific to **LO I**. Meanwhile, the program's Academic Director should collaborate with the *Modeling Business Decisions* lead course instructor to analyze the root cause of the consistently low scores and develop an action plan to address these concerns.
+-   **Learning Outcome IV**: An assessment of this learning outcome is planned as part of the routine evaluations for the 2023/2024 academic year.
+
+# MSc in Impact Entrepreneurship & Innovation
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 38
+
+```
+
+## Program objectives
+
+Based on Nova SBE's core values, the program objectives, which were previously defined and submitted to A3ES and international accreditation agencies, have been systematically mapped. This mapping process, as described in section @sec-SV, ensures alignment with our institutional ethos and educational goals for the program `{r} print.program.b(c)`.
+
+The @tbl-VO38, below, provides a detailed overview of how these objectives correspond to the learning outcomes, illustrating the integration of Nova SBE’s values into our educational framework:
+
+::: {#tbl-VO38}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+VO_table(c)
+
+```
+
+Nova SBE's values and Program objectives for the `{r} print.program.b(c)`
+:::
+
+## Learning Outcomes
+
+After evaluating the Program Objectives and their alignment with Nova SBE's core values, and considering the Learning Goals structure outlined in the section @sec-PLOS, we have defined the following **Learning Outcomes** for the program `{r} print.program.b(c)`, as detailed in the @tbl-LO38.
+
+::: {#tbl-LO38}
+```{r echo=FALSE, fig.align='center', , out.width="98%"}
+
+LO_table(c)
+
+```
+
+Program Learning Outcomes for the `{r} print.program.b(c)`
+:::
+
+These Learning Outcomes are described according to the three levels of proficiency defined in Section @sec-PLOS: Developing, Proficient, and Expert. @tbl-PLO38, below, outlines the levels of proficiency for the Learning Outcomes in the `{r} print.program.b(c)` program. Each Learning Outcome is mapped across three proficiency levels—Developing, Proficient, and Expert—detailing the competencies students are expected to demonstrate as they progress through the program.
+
+::: {#tbl-PLO38}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Prof_table(c)
+
+```
+
+Levels of Proficiency for Learning Outcomes in the `{r} print.program.b(c)`
+:::
+
+The defined Learning Outcomes contribute to achieving the program's pre-defined objectives, as detailed in the @tbl-OO38 of the [Appendix 9.A](#sec-app38). Additionally, the specific contributions of individual courses to each Learning Outcome, along with the corresponding levels of proficiency achieved, are detailed in @tbl-CO38, located in [Appendix 9.B](#sec-appcourse38).
+
+## 2022/2023 Academic year
+
+For the academic year 2022/2023, in accordance with the procedure defined in section @sec-ALS,the following courses were selected for the Learning Outcomes (LO) assessment process for the `{r} print.program.b(c)` program. The details of these courses and their respective contributions to the LO assessment are presented in the @tbl-ConifgLO38 below.
+
+::: {#tbl-ConifgLO38}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+config_table(c)
+
+```
+
+2022/2023 academic year Selected Learning Outcomes and respective courses for the `{r} print.program.b(c)`
+:::
+
+## Results
+
+The results for the `{r} print.program.b(c)` for the academic year of 2022/2023, were the following.
+
+### Direct Measures
+
+#### Learning Outcome II:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome III:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'III'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome V:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'V'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome VI:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'VI'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Overview
+
+-   The @tbl-KPIDirect38 below presents a summary of the results, for the `{r} print.program.b(c)`, from the direct measures of assessment for the academic year 2022/2023. The scores are presented on a scale of A, B, C, F, as defined in @sec-EvDirect.
+
+::: {#tbl-KPIDirect38}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_table(c)
+
+```
+
+Aggregated results of the direct measures for the `{r} print.program.b(c)`
+:::
+
+All the Learning Outcomes received a positive score of **A**, indicating strong performance across the board. There were no instances of negative scores or concerns among the assessed outcomes.
+
+### Indirect Measures
+
+For the program `{r} print.program.b(c)`, during the academic year 2022/2023, no indirect measurements were gathered. These indirect measurements will be collected in the next academic year to provide a more comprehensive evaluation of the program's effectiveness.
+
+### Integrated assurance overview {#sec-totalint38}
+
+The table below, @tbl-Total38, presents the integrated results for the program `{r} print.program.b(c)`, combining both direct and indirect measures of assessment. Data was triangulated as described in @sec-ALS, ensuring a comprehensive evaluation of the learning outcomes.
+
+::: {#tbl-Total38}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_total_table (c)
+
+```
+
+Integrated direct and indirect measures results for the `{r} print.program.b(c)`
+:::
+
+Since there are no indirect data points available for the program `{r} print.program.b(c)` for the 2022/2023 academic year, our analysis is limited to the direct measurements, all of which achieved a score of **A**.
+
+## Outcomes and recomendations
+
+Based on the results presented in @sec-totalint38, and since no Learning Outcomes require reassessment, the academic year 2023/2024 will focus solely on the scheduled assessments:
+
+-   **Learning Outcome I**: The scheduled evaluation for this learning outcome will take place during the 2023/2024 academic year.
+-   **Learning Outcome IV**: This learning outcome is slated for its routine review in the 2023/2024 academic year.
+
+Additionally, indirect data for the `{r} print.program.b(c)` program will be collected, offering a more comprehensive view of the actual development of the learning outcomes.
+
+# MSc in InternationalDevelopment and Public Policy
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 39
+
+```
+
+## Program objectives
+
+Based on Nova SBE's core values, the program objectives, which were previously defined and submitted to A3ES and international accreditation agencies, have been systematically mapped. This mapping process, as described in section @sec-SV, ensures alignment with our institutional ethos and educational goals for the program `{r} print.program.b(c)`.
+
+The @tbl-VO39, below, provides a detailed overview of how these objectives correspond to the learning outcomes, illustrating the integration of Nova SBE’s values into our educational framework:
+
+::: {#tbl-VO39}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+VO_table(c)
+
+```
+
+Nova SBE's values and Program objectives for the `{r} print.program.b(c)`
+:::
+
+## Learning Outcomes
+
+After evaluating the Program Objectives and their alignment with Nova SBE's core values, and considering the Learning Goals structure outlined in the section @sec-PLOS, we have defined the following **Learning Outcomes** for the program `{r} print.program.b(c)`, as detailed in the @tbl-LO39.
+
+::: {#tbl-LO39}
+```{r echo=FALSE, fig.align='center', , out.width="98%"}
+
+LO_table(c)
+
+```
+
+Program Learning Outcomes for the `{r} print.program.b(c)`
+:::
+
+These Learning Outcomes are described according to the three levels of proficiency defined in Section @sec-PLOS: Developing, Proficient, and Expert. @tbl-PLO39, below, outlines the levels of proficiency for the Learning Outcomes in the `{r} print.program.b(c)` program. Each Learning Outcome is mapped across three proficiency levels—Developing, Proficient, and Expert—detailing the competencies students are expected to demonstrate as they progress through the program.
+
+::: {#tbl-PLO39}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Prof_table(c)
+
+```
+
+Levels of Proficiency for Learning Outcomes in the `{r} print.program.b(c)`
+:::
+
+The defined Learning Outcomes contribute to achieving the program's pre-defined objectives, as detailed in the @tbl-OO39 of the [Appendix 10.A](#sec-app39). Additionally, the specific contributions of individual courses to each Learning Outcome, along with the corresponding levels of proficiency achieved, are detailed in @tbl-CO39, located in [Appendix 10.B](#sec-appcourse39).
+
+## 2022/2023 Academic year
+
+For the academic year 2022/2023, in accordance with the procedure defined in section @sec-ALS,the following courses were selected for the Learning Outcomes (LO) assessment process for the `{r} print.program.b(c)` program. The details of these courses and their respective contributions to the LO assessment are presented in the @tbl-ConifgLO39 below.
+
+::: {#tbl-ConifgLO39}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+config_table(c)
+
+```
+
+2022/2023 academic year Selected Learning Outcomes and respective courses for the `{r} print.program.b(c)`
+:::
+
+## Results
+
+The results for the `{r} print.program.b(c)` for the academic year of 2022/2023, were the following.
+
+### Direct Measures
+
+#### Learning Outcome II:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome III:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'III'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome V:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'V'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome VI:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'VI'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome I - Reassessment:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'I'
+e <- TRUE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Overview
+
+The @tbl-KPIDirect39 below presents a summary of the results, for the `{r} print.program.b(c)`, from the direct measures of assessment for the academic year 2022/2023. The scores are presented on a scale of A, B, C, F, as defined in @sec-EvDirect.
+
+::: {#tbl-KPIDirect39}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_table(c)
+
+```
+
+Aggregated results of the direct measures for the `{r} print.program.b(c)`
+:::
+
+Among all the Learning Outcomes, only the reassessment of **LO I**—specifically, the revaluation conducted on the *final exam* of the *Public Policy I* course—resulted in a negative score of **F**. All other Learning Outcomes received positive scores, with **A** grades across the board, except for **LO III**, which was assessed in the *final exam* of the *Policy Appraisal* course.
+
+### Indirect Measures
+
+For the program `{r} print.program.b(c)`, during the academic year 2022/2023, no indirect measurements were gathered. These indirect measurements will be collected in the next academic year to provide a more comprehensive evaluation of the program's effectiveness.
+
+### Integrated assurance overview {#sec-totalint39}
+
+The table below, @tbl-Total39, presents the integrated results for the program `{r} print.program.b(c)`, combining both direct and indirect measures of assessment. Data was triangulated as described in @sec-ALS, ensuring a comprehensive evaluation of the learning outcomes.
+
+::: {#tbl-Total39}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_total_table (c)
+
+```
+
+Integrated direct and indirect measures results for the `{r} print.program.b(c)`
+:::
+
+Since there are no indirect data points available for the `{r} print.program.b(c)` program for the 2022/2023 academic year, our analysis is confined to the direct measurements. All direct assessments showed positive results, except for the reassessment of **LO I**, which received a score of **F**.
+
+## Outcomes and recomendations
+
+Based on the integrated results in @sec-totalint39, we have identified key insights that will guide our ongoing evaluation and improvement strategies. As a result, the recommendations and actions for the 2023/2024 academic year are as follows:
+
+-   **Learning Outcome I**: This outcome is slated for a routine assessment in the 2023/2024 academic year. Additionally, we will reassess the *final exam* of the *Public Policy I* course. This reassessment, combined with new indirect data collected in the upcoming year, will help us determine whether the issue is systemic or isolated to **LO I**. In the meantime, the Academic Director should work closely with the *Public Policy I* course instructor to investigate the reasons for the persistently low scores and develop strategies to address these issues.
+-   **Learning Outcome IV**: This learning outcome will undergo its scheduled evaluation as part of the regular assessments for the 2023/2024 academic year.
+
+# PhD in Economics and Finance
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 27
+
+```
+
+## Program objectives
+
+Based on Nova SBE's core values, the program objectives, which were previously defined and submitted to A3ES and international accreditation agencies, have been systematically mapped. This mapping process, as described in section @sec-SV, ensures alignment with our institutional ethos and educational goals for the program `{r} print.program.b(c)`.
+
+The @tbl-VO27, below, provides a detailed overview of how these objectives correspond to the learning outcomes, illustrating the integration of Nova SBE’s values into our educational framework:
+
+::: {#tbl-VO27}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+VO_table(c)
+
+```
+
+Nova SBE's values and Program objectives for the `{r} print.program.b(c)`
+:::
+
+## Learning Outcomes
+
+After evaluating the Program Objectives and their alignment with Nova SBE's core values, and considering the Learning Goals structure outlined in the section @sec-PLOS, we have defined the following **Learning Outcomes** for the program `{r} print.program.b(c)`, as detailed in the @tbl-LO27.
+
+::: {#tbl-LO27}
+```{r echo=FALSE, fig.align='center', , out.width="98%"}
+
+LO_table(c)
+
+```
+
+Program Learning Outcomes for the `{r} print.program.b(c)`
+:::
+
+These Learning Outcomes are described according to the three levels of proficiency defined in Section @sec-PLOS: Developing, Proficient, and Expert. @tbl-PLO27, below, outlines the levels of proficiency for the Learning Outcomes in the `{r} print.program.b(c)` program. Each Learning Outcome is mapped across three proficiency levels—Developing, Proficient, and Expert—detailing the competencies students are expected to demonstrate as they progress through the program.
+
+::: {#tbl-PLO27}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Prof_table(c)
+
+```
+
+Levels of Proficiency for Learning Outcomes in the `{r} print.program.b(c)`
+:::
+
+The defined Learning Outcomes contribute to achieving the program's pre-defined objectives, as detailed in the @tbl-OO27 of the [Appendix 11.A](#sec-app27). Additionally, the specific contributions of individual courses to each Learning Outcome, along with the corresponding levels of proficiency achieved, are detailed in @tbl-CO27, located in [Appendix 11.B](#sec-appcourse27).
+
+## 2022/2023 Academic year
+
+For the academic year 2022/2023, in accordance with the procedure defined in section @sec-ALS,the following courses were selected for the Learning Outcomes (LO) assessment process for the `{r} print.program.b(c)` program. The details of these courses and their respective contributions to the LO assessment are presented in the @tbl-ConifgLO27 below.
+
+::: {#tbl-ConifgLO27}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+config_table(c)
+
+```
+
+2022/2023 academic year Selected Learning Outcomes and respective courses for the `{r} print.program.b(c)`
+:::
+
+## Results
+
+The results for the `{r} print.program.b(c)` for the academic year of 2022/2023, were the following.
+
+### Direct Measures
+
+#### Learning Outcome II:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome III:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'III'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome V:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'V'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome VI:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'VI'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Overview
+
+-   The @tbl-KPIDirect27 below presents a summary of the results, for the `{r} print.program.b(c)`, from the direct measures of assessment for the academic year 2022/2023. The scores are presented on a scale of A, B, C, F, as defined in @sec-EvDirect.
+
+::: {#tbl-KPIDirect27}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_table(c)
+
+```
+
+Aggregated results of the direct measures for the `{r} print.program.b(c)`
+:::
+
+Out of the four assessed Learning Outcomes, **LO II** and **LO V** received a score of **C** when evaluated in the *final assessment* of the *Macroeconomics II* course and the *final exam* of the *Macroeconomics I* course, respectively. The remaining Learning Outcomes were rated A.
+
+### Indirect Measures
+
+For the program `{r} print.program.b(c)`, during the academic year 2022/2023, no indirect measurements were gathered. These indirect measurements will be collected in the next academic year to provide a more comprehensive evaluation of the program's effectiveness.
+
+### Integrated assurance overview {#sec-totalint27}
+
+The table below, @tbl-Total27, presents the integrated results for the program `{r} print.program.b(c)`, combining both direct and indirect measures of assessment. Data was triangulated as described in @sec-ALS, ensuring a comprehensive evaluation of the learning outcomes.
+
+::: {#tbl-Total27}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_total_table (c)
+
+```
+
+Integrated direct and indirect measures results for the `{r} print.program.b(c)`
+:::
+
+Since there are no indirect data points available for the `{r} print.program.b(c)` program for the 2022/2023 academic year, our analysis is confined to direct measurements. Out of the four assessed Learning Outcomes, **LO II** and **LO V** received a score of **C** in the *final assessment* of the *Macroeconomics II* course and the *final exam* of the *Macroeconomics I* course, respectively, while the remaining Learning Outcomes were rated A, indicating overall positive results.
+
+## Outcomes and recomendations
+
+When assessing this PhD program, it is important to consider its unique characteristics: a small cohort size and future employers who are scattered and challenging to contact for feedback. Consequently, when analyzing both current and future data, it is essential to acknowledge that the results may show greater variability, as any particularly casual high or low scores will significantly affect the averages. Additionally, there will always be limitations on the amount of indirect data we can collect. With these caveats in mind, and based on the results presented in @sec-totalint27, the recommendations and actions for the 2023/2024 academic year are as follows:
+
+-   **Learning Outcome I**: This outcome is set for evaluation as part of the routine assessments for the 2023/2024 academic year.
+-   **Learning Outcome II**: To determine whether the low score reflects a broader systemic issue or was simply an isolated event, this outcome will be reassessed in the 2023/2024 academic year in a course different from **Macroeconomics II**.
+-   **Learning Outcome IV**: This outcome will undergo its scheduled assessment as part of the regular evaluations for the 2023/2024 academic year.
+-   **Learning Outcome V**: Similar to **LO II**, this outcome will be reassessed in the 2023/2024 academic year in a course other than *Macroeconomics I*, to establish whether the low score was indicative of a systemic problem or a one-off occurrence.
+
+# PhD in Management
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 33
+
+```
+
+## Program objectives
+
+Based on Nova SBE's core values, the program objectives, which were previously defined and submitted to A3ES and international accreditation agencies, have been systematically mapped. This mapping process, as described in section @sec-SV, ensures alignment with our institutional ethos and educational goals for the program `{r} print.program.b(c)`.
+
+The @tbl-VO33, below, provides a detailed overview of how these objectives correspond to the learning outcomes, illustrating the integration of Nova SBE’s values into our educational framework:
+
+::: {#tbl-VO33}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+VO_table(c)
+
+```
+
+Nova SBE's values and Program objectives for the `{r} print.program.b(c)`
+:::
+
+## Learning Outcomes
+
+After evaluating the Program Objectives and their alignment with Nova SBE's core values, and considering the Learning Goals structure outlined in the section @sec-PLOS, we have defined the following **Learning Outcomes** for the program `{r} print.program.b(c)`, as detailed in the @tbl-LO33.
+
+::: {#tbl-LO33}
+```{r echo=FALSE, fig.align='center', , out.width="98%"}
+
+LO_table(c)
+
+```
+
+Program Learning Outcomes for the `{r} print.program.b(c)`
+:::
+
+These Learning Outcomes are described according to the three levels of proficiency defined in Section @sec-PLOS: Developing, Proficient, and Expert. @tbl-PLO33, below, outlines the levels of proficiency for the Learning Outcomes in the `{r} print.program.b(c)` program. Each Learning Outcome is mapped across three proficiency levels—Developing, Proficient, and Expert—detailing the competencies students are expected to demonstrate as they progress through the program.
+
+::: {#tbl-PLO33}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+Prof_table(c)
+
+```
+
+Levels of Proficiency for Learning Outcomes in the `{r} print.program.b(c)`
+:::
+
+The defined Learning Outcomes contribute to achieving the program's pre-defined objectives, as detailed in the @tbl-OO33 of the [Appendix 12.A](#sec-app33). Additionally, the specific contributions of individual courses to each Learning Outcome, along with the corresponding levels of proficiency achieved, are detailed in @tbl-CO33, located in [Appendix 12.B](#sec-appcourse33).
+
+## 2022/2023 Academic year
+
+For the academic year 2022/2023, in accordance with the procedure defined in section @sec-ALS,the following courses were selected for the Learning Outcomes (LO) assessment process for the `{r} print.program.b(c)` program. The details of these courses and their respective contributions to the LO assessment are presented in the @tbl-ConifgLO33 below.
+
+::: {#tbl-ConifgLO33}
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+
+config_table(c)
+
+```
+
+2022/2023 academic year Selected Learning Outcomes and respective courses for the `{r} print.program.b(c)`
+:::
+
+## Results
+
+The results for the `{r} print.program.b(c)` for the academic year of 2022/2023, were the following.
+
+### Direct Measures
+
+#### Learning Outcome II:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'II'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome III:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'III'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome V:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'V'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Learning Outcome VI:
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+d <- 'VI'
+e <- FALSE
+
+data.course.outcome(c,d,e)
+
+```
+
+`{r} print.outcome(c,d)`
+
+**Course assessed**: `{r} print.course(c,d,e)`
+
+**Assessment moment**: `{r} print.assessment(c,d,e)`
+
+```{r echo=FALSE, warning = FALSE, message = FALSE, fig.align='center', out.width = '60%', fig.asp=0.4}
+plot(p)
+
+```
+
+```{r echo=FALSE, warning = FALSE, message = FALSE,  fig.align='center', out.width="60%"}
+plot(OR_table)
+
+```
+
+#### Overview
+
+-   The @tbl-KPIDirect33 below presents a summary of the results, for the `{r} print.program.b(c)`, from the direct measures of assessment for the academic year 2022/2023. The scores are presented on a scale of A, B, C, F, as defined in @sec-EvDirect.
+
+::: {#tbl-KPIDirect33}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_table(c)
+
+```
+
+Aggregated results of the direct measures for the `{r} print.program.b(c)`
+:::
+
+All the Learning Outcomes were rated **A**, reflecting excellent performance throughout. There were no negative scores or areas of concern among the outcomes evaluated.
+
+### Indirect Measures
+
+For the program `{r} print.program.b(c)`, during the academic year 2022/2023, no indirect measurements were gathered. These indirect measurements will be collected in the next academic year to provide a more comprehensive evaluation of the program's effectiveness.
+
+### Integrated assurance overview {#sec-totalint33}
+
+The table below, @tbl-Total33, presents the integrated results for the program `{r} print.program.b(c)`, combining both direct and indirect measures of assessment. Data was triangulated as described in @sec-ALS, ensuring a comprehensive evaluation of the learning outcomes.
+
+::: {#tbl-Total33}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+KPI_total_table (c)
+
+```
+
+Integrated direct and indirect measures results for the `{r} print.program.b(c)`
+:::
+
+As there are no indirect data points available for the `{r} print.program.b(c)` program for the 2022/2023 academic year, our analysis relies solely on the direct measurements, all of which received a score of **A**.
+
+## Outcomes and recomendations
+
+When evaluating this PhD program, it is crucial to consider its unique characteristics: a small cohort size and future employers who are dispersed and difficult to reach for feedback. Consequently, when analyzing both current and future data, it is important to recognize that the results may exhibit greater variability, as any particularly high or low scores will have a significant impact on the averages. Additionally, there will always be constraints on the amount of indirect data we can gather. Taking into consideration that all assessed Learning Outcomes (LOs) received an **A** score, the program demonstrates strong performance. With these considerations in mind and based on the results presented in @sec-totalint33, the planned actions for the 2023/2024 academic year are:
+
+-   **Learning Outcome I**: This outcome is set for evaluation as part of the routine assessments for the 2023/2024 academic year.
+-   **Learning Outcome IV**: This outcome will undergo its scheduled assessment as part of the regular evaluations for the 2023/2024 academic year.
+
+# Final recomendations and future developments
+
+As a continuous improvement process, the **Assurance of Learning** (AoL) itself is subject to ongoing refinement. We are committed to continuously enhancing the AoL process, not only to support our programs and courses but also to actively promote the development of the desired skills and competencies in our students. To achieve this, the AoL process will undergo regular reviews to identify areas for improvement and to better integrate quality assurance practices into the design and development of programs and courses. Our ultimate goal is to evolve the AoL to a level of maturity where it acts as a key enabler of [Quality by Design](https://en.wikipedia.org/wiki/Quality_by_design), thereby enhancing course content, delivery and overall program quality.
+
+With this in mind, and considering that the 2023/2024 academic year will mark only the third year of the AoL process, there is still significant room for improvement. Therefore, we plan to implement the following changes:
+
+-   **Standardization of Learning Outcomes Ordering**: Standardization of Learning Outcomes Ordering: As noted in @nte-LOO, programs where the order of Learning Outcomes (LOs) is not consistent with the order outlined in @sec-PLOS will be adjusted to ensure uniformity across programs. This may result in minor changes to the planned direct measures assessment, as the assessments for the academic year 2023/2024 will focus on LOs I and IV to maximize consistency. We aim, through this change, to establish a clearly recognizable and consistent structure that remains top of mind for both faculty and academic directors. This approach will help ensure that the desired learning outcomes are continuously represented in both course content and assessment moments.
+
+-   **Inclusion of the Executive Masters**: In the academic year 2022/2023, Nova SBE launched five new Executive Masters programs. These programs were developed as post-experience courses aimed at working professionals who wish to deepen their knowledge in specific areas of Nova SBE's expertise. Of these five programs, three are highly executive versions of courses that already exist in the pre-experience format. In the academic year 2023/2024, all Executive Masters will undergo the assurance of learning process. For those that have a corresponding pre-experience master, the Learning Outcomes (LOs) already defined for the pre-experience master will be used. The Executive Masters will be subject to indirect measurement data gathering; however, given that many participants are tenured professionals, not currently active in the labor market, we anticipate that recruiter data will be limited.
+
+-   **Extension of Indirect Data Gathering Initiatives**: The academic year 2022/2023 marked the first time we implemented data gathering initiatives for indirect measures to support the Assurance of Learning process. However, not all programs were included in this initial effort. In 2023/2024, we aim to expand these initiatives to cover all programs. We do, however, anticipate challenges, particularly in gathering employer survey data for the Executive Masters and PhD programs, as discussed in @sec-employsurv. These challenges arise because the employers of alumni from these programs are dispersed, and the alumni themselves enter the job market at different times and at varying paces.
+
+-   **Learning Outcome Statements Aligned with Bloom's Taxonomy**: Some of the current Learning Outcome (LO) statements are not fully consistent with the principles of [Bloom's Taxonomy](https://en.wikipedia.org/wiki/Bloom's_taxonomy). Therefore, in the 2023/2024 academic year, these LO statements will be reviewed to ensure they are fully aligned with Bloom's framework. Care will be taken to preserve the original intent and meaning of each statement, ensuring that they continue to reflect the same skills and competencies as before. With this revision, we aim to enhance the clarity and effectiveness of our learning outcomes, providing a more structured approach to assessing and developing students' knowledge, skills, and abilities.
+
+-   **Enhancing Coordination with Academic Directors**: The academic year 2022/2023 marked the second year of implementing the Assurance of Learning (AoL) process. With the inclusion of indirect data points and two years' worth of direct data, we now have comprehensive coverage of all learning outcomes. This expanded dataset provides a clearer understanding of how learning outcomes are represented across our programs. In the coming year, we aim to strengthen our collaboration with academic directors, ensuring that the AoL process becomes a valuable tool for guiding the management, development, and adjustment of course content and curricula.
+
+-   **Review of the Learning Outcomes for the MSc in Impact Entrepreneurship & Innovation**: The MSc in Impact Entrepreneurship & Innovation underwent a significant reframing during the academic year 2023/2024. Based on student feedback and the increased demand for certain elective courses and course projects, it became apparent that greater emphasis was needed on the Innovation dimension of the program. As a result, course content has been, and continues to be, adapted to reflect this shift. At the request of the current academic director, the LO will also be reviewed to align with these changes.
+
+As we move forward, our commitment to refining the Assurance of Learning (AoL) process remains steadfast. The initiatives outlined for the 2023/2024 academic year reflect our dedication to enhancing program quality, fostering academic excellence, and aligning our educational offerings with evolving student and market needs. By implementing these changes, we aim to create a robust framework that not only upholds the integrity of our learning outcomes but also supports continuous improvement in teaching and learning. Our goal is to cultivate an academic environment where the AoL process is seamlessly integrated into the fabric of our institution, guiding program development and ensuring that our graduates are equipped with the skills and competencies required to excel in their professional journeys. With each step, we strive to make our programs more responsive, inclusive, and effective, ultimately contributing to the success of our students and the broader academic community.
+
+\newpage
+
+# Appendices {.unnumbered .appendix}
+
+```{=latex}
+\newpage
+\landscape
+\pagestyle{landscapeplain}
+```
+
+## Appendix 1.A {#sec-app1 .unnumbered .appendix}
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 1
+
+```
+
+::: {#tbl-OO1}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+OO_table(c)
+
+```
+
+Learning Outcomes and Program Objectives for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 1.B {#sec-appcourse1 .unnumbered .appendix}
+
+::: {#tbl-CO1}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+CO_table(c)
+
+```
+
+Mapping of Course Proficiency Levels to Learning Outcomes for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 2.A {#sec-app2 .unnumbered .appendix}
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 2
+
+```
+
+::: {#tbl-OO2}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+OO_table(c)
+
+```
+
+Learning Outcomes and Program Objectives for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 2.B {#sec-appcourse2 .unnumbered .appendix}
+
+::: {#tbl-CO2}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+CO_table(c)
+
+```
+
+Mapping of Course Proficiency Levels to Learning Outcomes for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 3.A {#sec-app14 .unnumbered .appendix}
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 14
+
+```
+
+::: {#tbl-OO14}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+OO_table(c)
+
+```
+
+Learning Outcomes and Program Objectives for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 3.B {#sec-appcourse14 .unnumbered .appendix}
+
+::: {#tbl-CO14}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+CO_table(c)
+
+```
+
+Mapping of Course Proficiency Levels to Learning Outcomes for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 4.A {#sec-app15 .unnumbered .appendix}
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 15
+
+```
+
+::: {#tbl-OO15}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+OO_table(c)
+
+```
+
+Learning Outcomes and Program Objectives for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 4.B {#sec-appcourse15 .unnumbered .appendix}
+
+::: {#tbl-CO15}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+CO_table(c)
+
+```
+
+Mapping of Course Proficiency Levels to Learning Outcomes for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 5.A {#sec-app35 .unnumbered .appendix}
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 35
+
+```
+
+::: {#tbl-OO35}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+OO_table(c)
+
+```
+
+Learning Outcomes and Program Objectives for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 5.B {#sec-appcourse35 .unnumbered .appendix}
+
+::: {#tbl-CO35}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+CO_table(c)
+
+```
+
+Mapping of Course Proficiency Levels to Learning Outcomes for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 6.A {#sec-app16 .unnumbered .appendix}
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 16
+
+```
+
+::: {#tbl-OO16}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+OO_table(c)
+
+```
+
+Learning Outcomes and Program Objectives for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 6.B {#sec-appcourse16 .unnumbered .appendix}
+
+::: {#tbl-CO16}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+CO_table(c)
+
+```
+
+Mapping of Course Proficiency Levels to Learning Outcomes for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 7.A {#sec-app36 .unnumbered .appendix}
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 36
+
+```
+
+::: {#tbl-OO36}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+OO_table(c)
+
+```
+
+Learning Outcomes and Program Objectives for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 7.B {#sec-appcourse36 .unnumbered .appendix}
+
+::: {#tbl-CO36}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+CO_table(c)
+
+```
+
+Mapping of Course Proficiency Levels to Learning Outcomes for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 8.A {#sec-app37 .unnumbered .appendix}
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 37
+
+```
+
+::: {#tbl-OO37}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+OO_table(c)
+
+```
+
+Learning Outcomes and Program Objectives for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 8.B {#sec-appcourse37 .unnumbered .appendix}
+
+::: {#tbl-CO37}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+CO_table(c)
+
+```
+
+Mapping of Course Proficiency Levels to Learning Outcomes for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 9.A {#sec-app38 .unnumbered .appendix}
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 38
+
+```
+
+::: {#tbl-OO38}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+OO_table(c)
+
+```
+
+Learning Outcomes and Program Objectives for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 9.B {#sec-appcourse38 .unnumbered .appendix}
+
+::: {#tbl-CO38}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+CO_table(c)
+
+```
+
+Mapping of Course Proficiency Levels to Learning Outcomes for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 10.A {#sec-app39 .unnumbered .appendix}
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 39
+
+```
+
+::: {#tbl-OO39}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+OO_table(c)
+
+```
+
+Learning Outcomes and Program Objectives for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 10.B {#sec-appcourse39 .unnumbered .appendix}
+
+::: {#tbl-CO39}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+CO_table(c)
+
+```
+
+Mapping of Course Proficiency Levels to Learning Outcomes for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 11.A {#sec-app27 .unnumbered .appendix}
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 27
+
+```
+
+::: {#tbl-OO27}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+OO_table(c)
+
+```
+
+Learning Outcomes and Program Objectives for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 11.B {#sec-appcourse27 .unnumbered .appendix}
+
+::: {#tbl-CO27}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+CO_table(c)
+
+```
+
+Mapping of Course Proficiency Levels to Learning Outcomes for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 12.A {#sec-app33 .unnumbered .appendix}
+
+```{r echo=FALSE, warning = FALSE, message = FALSE}
+
+c <- 33
+
+```
+
+::: {#tbl-OO33}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+OO_table(c)
+
+```
+
+Learning Outcomes and Program Objectives for `{r} print.program.b(c)`
+:::
+
+\newpage
+
+## Appendix 12.B {#sec-appcourse33 .unnumbered .appendix}
+
+::: {#tbl-CO33}
+```{r echo=FALSE, fig.align='center', out.width="98%"}
+
+CO_table(c)
+
+```
+
+Mapping of Course Proficiency Levels to Learning Outcomes for `{r} print.program.b(c)`
+:::
