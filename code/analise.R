@@ -6,7 +6,7 @@ library(ggthemes)
 library(scales)
 library(flextable)
 library(officer)
-
+library(purrr)
 
 
 #load fonts#
@@ -54,7 +54,8 @@ config$Outcome <- as.factor(config$Outcome)
 
 config <- inner_join(config, courses, by='Code', relationship = "many-to-many")
 
-config <- config[,c(1:3,9,5,4,6:8)]
+config <- config[,c(1:3,9,5,4,6:8)] %>% 
+  distinct()
 
 
 #define collors#
@@ -310,16 +311,16 @@ config_table <- function(a){
 
 # Gráfico boxplot #
 
-data.course.outcome <- function(a,b,c){
+data.course.outcome <- function(a,b,c,d){
   
-  TOT <- subset(full_data ,full_data$Program == a & full_data$Outcome == b & full_data$Revaluation == c) %>% 
+  TOT <- subset(full_data ,full_data$Program == a & full_data$Outcome == b & full_data$Revaluation == c & full_data$Course == d) %>% 
     nrow()
   
-  BT <- subset(full_data ,full_data$Program == a & full_data$Outcome == b & full_data$Revaluation == c) %>% 
+  BT <- subset(full_data ,full_data$Program == a & full_data$Outcome == b & full_data$Revaluation == c & full_data$Course == d) %>% 
     filter(Score < 12) %>% 
     nrow()
   
-  Targ <- subset(full_data ,full_data$Program == a & full_data$Outcome == b & full_data$Revaluation == c) %>% 
+  Targ <- subset(full_data ,full_data$Program == a & full_data$Outcome == b & full_data$Revaluation == c & full_data$Course == d) %>% 
     filter(Score >= 12 & Score <= 16) %>% 
     nrow()
   
@@ -334,7 +335,7 @@ data.course.outcome <- function(a,b,c){
   AT <- percent(AT/TOT, accuracy = .01)
   TTAT <- percent(TTAT/TOT, accuracy = .01)
   
-  av.score <- subset(full_data ,full_data$Program == a & full_data$Outcome == b & full_data$Revaluation == c) %>%
+  av.score <- subset(full_data ,full_data$Program == a & full_data$Outcome == b & full_data$Revaluation == c & full_data$Course == d) %>%
     select(Score) %>% 
     summarize_at("Score", mean) %>% 
     as.numeric() %>% 
@@ -369,7 +370,7 @@ data.course.outcome <- function(a,b,c){
   #         axis.title.y = element_blank()
   #   )
   
-  p <<- subset(full_data, full_data$Program == a & full_data$Outcome == b & full_data$Revaluation == c) %>% 
+  p <<- subset(full_data, full_data$Program == a & full_data$Outcome == b & full_data$Revaluation == c & full_data$Course == d) %>% 
     ggplot(aes(x = Score)) +
     geom_boxplot(
       aes(x = Score), 
@@ -490,7 +491,10 @@ resultados <- full_data %>%
             OT = sum(Score >= 12 & Score < 16),
             AT = sum(Score >= 16)) %>% 
   mutate(TTAT = round(((OT + AT) / count) * 100, 2)) %>% 
-  mutate(Val = get_grade(TTAT))
+  mutate(Val = get_grade(TTAT)) %>% 
+  semi_join(config, by = c("Program", "Outcome", "Course" = "Code"))
+
+
 
 
 KPI_table <- function(a){
@@ -692,6 +696,45 @@ tabela.completa <- tabela.completa[order(tabela.completa$Program, tabela.complet
 
 tabela.completa <- tabela.completa[,c(1,2,3,6,7,4,5)]
 
+# Define the ranking: lower means "worse"
+grade_order <- c("A", "B", "C", "F")
+
+# Function to return the lower score if there are two scores, <- é preciso rever isto
+# otherwise it returns the score as-is.
+get_lower_score <- function(scores) {
+  # Ensure scores is a character vector and trim whitespace
+  scores <- trimws(as.character(scores))
+  
+  # If the cell is entirely NA or empty, return NA
+  if(length(scores) == 0 || all(is.na(scores)) || all(scores == "")) {
+    return(NULL)
+  }
+
+  
+  # Keep only non-NA scores for comparison
+  valid <- scores[!is.na(scores)]
+  
+  # If only one valid score exists, return it
+  if(length(valid) == 1) {
+    return(valid)
+  } else if(length(valid) >= 2) {
+    # Use only the first two if more than two exist
+    valid <- valid[1:2]
+    inds <- match(valid, grade_order)
+    
+    # If none of the valid scores match the grade_order, return NA
+    if(all(is.na(inds))) {
+      return(NA_character_)
+    }
+    
+    # Return the lower grade (i.e. the one with the higher index)
+    return(valid[which.max(inds)])
+  } else {
+    return(NA_character_)
+  }
+}
+
+
 
 # Função tabela completa por programa #
 
@@ -704,7 +747,9 @@ KPI_total_table <- function(a){
   
   subset(tabela.completa, Program == a) %>% 
     select(-1) %>% 
-    rename_with(~ c(' ', 'AY2122', 'Reassessment', 'Regular', 'Employer', 'Alumni' )) %>%
+    rename_with(~ c(' ', 'AY2223', 'Assessment', 'Reassessment', 'Employer', 'Alumni' )) %>%
+    mutate(across(c(Reassessment),
+                 ~ map_chr(., get_lower_score)))
     flextable() %>% 
     #add_header_row(values = p.name, colwidths = 6) %>% 
     #add_header_row(values = "Assurance of Learning KPIs for the", colwidths = 6) %>% 
@@ -742,7 +787,7 @@ KPI_total_table <- function(a){
     fontsize(part = "header", size = 9, i=1) %>% 
     width(j = 1, "width"=10, unit = "mm") %>% 
     footnote(i = 1, j = 2, 
-             value = as_paragraph("Academic year 2021/2022"), 
+             value = as_paragraph("Academic year 2022/2023"), 
              part="header", ref_symbols = "1") %>% 
     fontsize(part = "footer", size = 8) %>%
     line_spacing(part = "footer", space = 0.1) %>% 
@@ -819,13 +864,13 @@ print.outcome <- function(a,b){
 
 print.course <- function(a,b,c){
   
-  I(config$Course[config$Program == a & config$Outcome == b & config$Revaluation == c])
+  I(config$Course[config$Program == a & config$Outcome == b & config$Revaluation == c & config$Code])
   
 }
 
 print.assessment <- function(a,b,c){
   
-  I(config$Assessment[config$Program == a & config$Outcome == b & config$Revaluation == c])
+  I(config$Assessment[config$Program == a & config$Outcome == b & config$Revaluation == c] & config$Code)
   
 }
 
@@ -951,5 +996,5 @@ Employer_table <- function(a){
 
 save.image(file="quarto/all_data.RData")
 
-# quarto::quarto_render("quarto/report.qmd", output_format = "pdf")
+quarto::quarto_render("quarto/report.qmd", output_format = "pdf")
 
