@@ -291,6 +291,7 @@ config_table <- function(a){
     mutate(Code = as.character(Code)) %>% 
     data.table::setorder('Outcome') %>%
     mutate(Revaluation = ifelse(Revaluation == FALSE, "", ifelse(Revaluation == TRUE, "X", Revaluation))) %>%
+    rename(Reassessment = Revaluation) %>% 
     flextable() %>% 
     font(part = "body", fontname = "Open Sans", j=c(1,3,5)) %>% 
     font(part = "body", fontname = "Playfair Display", j=c(4:5)) %>% 
@@ -324,7 +325,7 @@ data.course.outcome <- function(a,b,c,d){
     filter(Score >= 12 & Score <= 16) %>% 
     nrow()
   
-  AT <- subset(full_data ,full_data$Program == a & full_data$Outcome == b & full_data$Revaluation == c) %>% 
+  AT <- subset(full_data ,full_data$Program == a & full_data$Outcome == b & full_data$Revaluation == c & full_data$Course == d) %>% 
     filter(Score > 16) %>% 
     nrow()
   
@@ -407,7 +408,7 @@ data.course.outcome <- function(a,b,c,d){
   
   
   data.frame('KPIs' = c("# of assessments", "Mean score", "Below Target", "Target", 
-                        "Above Target", "Total on Target and Above Target"),
+                        "Above Target", "Total On Target and Above Target"),
              ' ' = c(TOT, av.score, BT, Targ, AT, TTAT))  %>% 
     rename_with(~ c(' '), 2) %>% 
     flextable() %>% 
@@ -433,8 +434,8 @@ data.course.outcome <- function(a,b,c,d){
   
   
   
-  OR_table <<-  data.frame('KPIs' = c("# of assessments", "Mean score", "Below Target", "on Target", 
-                                      "Above Target", "Total on Target and Above Target"),
+  OR_table <<-  data.frame('KPIs' = c("# of assessments", "Mean score", "Below Target", "On Target", 
+                                      "Above Target", "Total On Target and Above Target"),
                            ' ' = c(TOT, av.score, BT, Targ, AT, TTAT))  %>% 
     rename_with(~ c(' '), 2) %>% 
     flextable() %>% 
@@ -573,7 +574,7 @@ KPI_table <- function(a){
     bg(bg="#FFCCBD", part="body", j = 4, i = ~ Score == "F") %>% 
     #fontsize(part = "header", size = 14, i=c(1:2)) %>% 
     footnote(i = 1, j = 3, 
-             value = as_paragraph("Total on Target and Above Target"), 
+             value = as_paragraph("Total On Target and Above Target"), 
              part="header", ref_symbols = "1") %>% 
     fontsize(part = "footer", size = 8) %>% 
     font(part = "footer", fontname = "Open Sans")
@@ -701,36 +702,41 @@ grade_order <- c("A", "B", "C", "F")
 
 # Function to return the lower score if there are two scores, <- é preciso rever isto
 # otherwise it returns the score as-is.
-get_lower_score <- function(scores) {
-  # Ensure scores is a character vector and trim whitespace
+
+get_highest_score <- function(scores) {
+  # If the input is already NULL, return NULL
+  if (is.null(scores)) return(NULL)
+  
+  # Ensure scores are characters and trim whitespace
   scores <- trimws(as.character(scores))
   
-  # If the cell is entirely NA or empty, return NA
-  if(length(scores) == 0 || all(is.na(scores)) || all(scores == "")) {
+  # If there is no valid score, return NULL
+  if (length(scores) == 0 || all(is.na(scores)) || all(scores == "")) {
     return(NULL)
   }
-
   
-  # Keep only non-NA scores for comparison
-  valid <- scores[!is.na(scores)]
+  # If only one score exists, return it
+  if (length(scores) == 1) {
+    return(scores)
+  }
   
-  # If only one valid score exists, return it
-  if(length(valid) == 1) {
-    return(valid)
-  } else if(length(valid) >= 2) {
-    # Use only the first two if more than two exist
-    valid <- valid[1:2]
+  # If there are two (or more) scores, consider only the first two
+  if (length(scores) >= 2) {
+    valid <- scores[1:2]
     inds <- match(valid, grade_order)
     
-    # If none of the valid scores match the grade_order, return NA
-    if(all(is.na(inds))) {
-      return(NA_character_)
+    # If neither score is recognized, return NULL
+    if (all(is.na(inds))) {
+      return(NULL)
     }
     
-    # Return the lower grade (i.e. the one with the higher index)
-    return(valid[which.max(inds)])
-  } else {
-    return(NA_character_)
+    # If one score is NA (unrecognized), return the non-NA score
+    if (any(is.na(inds))) {
+      return(valid[!is.na(inds)][1])
+    }
+    
+    # Return the best (i.e. highest) grade: the one with the smallest index in grade_order
+    return(valid[which.min(inds)])
   }
 }
 
@@ -748,8 +754,8 @@ KPI_total_table <- function(a){
   subset(tabela.completa, Program == a) %>% 
     select(-1) %>% 
     rename_with(~ c(' ', 'AY2223', 'Assessment', 'Reassessment', 'Employer', 'Alumni' )) %>%
-    mutate(across(c(Reassessment),
-                 ~ map_chr(., get_lower_score)))
+    mutate(across(c(Reassessment), ~ map(., get_highest_score))) %>% 
+    unnest(cols = c(' ', 'AY2223', 'Assessment', 'Reassessment', 'Employer', 'Alumni' )) %>% 
     flextable() %>% 
     #add_header_row(values = p.name, colwidths = 6) %>% 
     #add_header_row(values = "Assurance of Learning KPIs for the", colwidths = 6) %>% 
@@ -763,18 +769,18 @@ KPI_total_table <- function(a){
     align(align = "center", part = "body", j=c(1:6)) %>%
     bold(part="body", j = c(1)) %>% 
     fontsize(part = "body", size = 10, j=(2:6)) %>% 
-    bg(bg="#C4FF9E", part="body", j=(2), i = ~ AY2122 == "A") %>% 
-    bg(bg="#D2FFFA", part="body", j=(2), i = ~ AY2122 == "B") %>% 
-    bg(bg="#FEE8BC", part="body", j=(2), i = ~ AY2122 == "C") %>% 
-    bg(bg="#FFCCBD", part="body", j=(2), i = ~ AY2122 == "F") %>% 
-    bg(bg="#C4FF9E", part="body", j=(3), i = ~ Reassessment == "A") %>% 
-    bg(bg="#D2FFFA", part="body", j=(3), i = ~ Reassessment == "B") %>% 
-    bg(bg="#FEE8BC", part="body", j=(3), i = ~ Reassessment == "C") %>% 
-    bg(bg="#FFCCBD", part="body", j=(3), i = ~ Reassessment == "F") %>%
-    bg(bg="#C4FF9E", part="body", j=(4), i = ~ Regular == "A") %>% 
-    bg(bg="#D2FFFA", part="body", j=(4), i = ~ Regular == "B") %>% 
-    bg(bg="#FEE8BC", part="body", j=(4), i = ~ Regular == "C") %>% 
-    bg(bg="#FFCCBD", part="body", j=(4), i = ~ Regular == "F") %>%
+    bg(bg="#C4FF9E", part="body", j=(2), i = ~ AY2223 == "A") %>% 
+    bg(bg="#D2FFFA", part="body", j=(2), i = ~ AY2223 == "B") %>% 
+    bg(bg="#FEE8BC", part="body", j=(2), i = ~ AY2223 == "C") %>% 
+    bg(bg="#FFCCBD", part="body", j=(2), i = ~ AY2223 == "F") %>% 
+    bg(bg="#C4FF9E", part="body", j=(4), i = ~ Reassessment == "A") %>% 
+    bg(bg="#D2FFFA", part="body", j=(4), i = ~ Reassessment == "B") %>% 
+    bg(bg="#FEE8BC", part="body", j=(4), i = ~ Reassessment == "C") %>% 
+    bg(bg="#FFCCBD", part="body", j=(4), i = ~ Reassessment == "F") %>%
+    bg(bg="#C4FF9E", part="body", j=(3), i = ~ Assessment == "A") %>% 
+    bg(bg="#D2FFFA", part="body", j=(3), i = ~ Assessment == "B") %>% 
+    bg(bg="#FEE8BC", part="body", j=(3), i = ~ Assessment == "C") %>% 
+    bg(bg="#FFCCBD", part="body", j=(3), i = ~ Assessment == "F") %>%
     bg(bg="#C4FF9E", part="body", j=(5), i = ~ Employer == "A") %>% 
     bg(bg="#D2FFFA", part="body", j=(5), i = ~ Employer == "B") %>% 
     bg(bg="#FEE8BC", part="body", j=(5), i = ~ Employer == "C") %>% 
@@ -789,7 +795,10 @@ KPI_total_table <- function(a){
     footnote(i = 1, j = 2, 
              value = as_paragraph("Academic year 2022/2023"), 
              part="header", ref_symbols = "1") %>% 
-    fontsize(part = "footer", size = 8) %>%
+    footnote(i = 1, j = 4, 
+             value = as_paragraph("When reassessments yield two different scores, only the higher score is displayed."), 
+             part="header", ref_symbols = "2") %>% 
+    fontsize(part = "footer", size = 6) %>%
     line_spacing(part = "footer", space = 0.1) %>% 
     font(part = "footer", fontname = "Open Sans")
     
@@ -862,15 +871,15 @@ print.outcome <- function(a,b){
   
 }
 
-print.course <- function(a,b,c){
+print.course <- function(a,b,c,d){
   
-  I(config$Course[config$Program == a & config$Outcome == b & config$Revaluation == c & config$Code])
+  I(config$Course[config$Program == a & config$Outcome == b & config$Revaluation == c & config$Code == d])
   
 }
 
-print.assessment <- function(a,b,c){
+print.assessment <- function(a,b,c,d){
   
-  I(config$Assessment[config$Program == a & config$Outcome == b & config$Revaluation == c] & config$Code)
+  I(config$Assessment[config$Program == a & config$Outcome == b & config$Revaluation == c & config$Code == d])
   
 }
 
@@ -929,7 +938,7 @@ Alumni_table <- function(a){
              value = as_paragraph("On a Likert scale of 1 to 6"), 
              part="header", ref_symbols = "1") %>% 
       footnote(i = 1, j = 4, 
-             value = as_paragraph("Total on Target and Above Target"), 
+             value = as_paragraph("Total On Target and Above Target"), 
              part="header", ref_symbols = "2") %>% 
       fontsize(part = "footer", size = 8) %>% 
       line_spacing(part = "footer", space = 0.1) %>% 
@@ -977,7 +986,7 @@ Employer_table <- function(a){
              value = as_paragraph("On a Likert scale of 1 to 6"), 
              part="header", ref_symbols = "1") %>% 
     footnote(i = 1, j = 4, 
-             value = as_paragraph("Total on Target and Above Target"), 
+             value = as_paragraph("Total On Target and Above Target"), 
              part="header", ref_symbols = "2") %>% 
     fontsize(part = "footer", size = 8) %>% 
     line_spacing(part = "footer", space = 0.1) %>% 
